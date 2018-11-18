@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 
+
 class Result extends Component {
+  
   state = {
-    books: [],
-    loading: false
+    recipeList: []
+  }
+
+  componentDidMount() {
+    console.log(this.props)
   }
 
   render() {

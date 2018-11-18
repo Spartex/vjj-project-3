@@ -2,6 +2,10 @@
     column-count: 3;
 }
 
+.foodGroupSect {
+    margin-top: 1.5rem;
+}
+
 @media (min-width: 48em) {
     .card-columns {
         -webkit-column-count: 4;

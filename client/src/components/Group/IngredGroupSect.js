@@ -3,7 +3,7 @@ import "./IngredGroupSect.css"
 
 export const IngredGroupSect = props => {
     return (
-        <div className="card">
+        <div className="card foodGroupSect">
             <div className="card-header">
                 Pick Your Ingredient
         </div>

@@ -1,14 +1,22 @@
 import React, { Component } from "react"
 import API from "../../utils/API"
 import { IngredGroupSect, IngredGroupCard, IngredCard, IngredModal } from "../../components/Group"
-import { IngredSelectedSect, IngredAdd } from "../../components/Selection"
+import { IngredSelectedSect, IngredAdd, GetRecipeListBtn } from "../../components/Selection"
 
 class Search extends Component {
+
   state = {
     addIngred: ['chicken', 'tomato', 'banana'],
     ingredGroup: [],
     ingredAll: {},
     modalIsOpen: {},
+    recipeList: []
+  }
+
+  componentDidMount() {
+    // this is called to populate the state variables: ingredAll
+    // and ingredGroup (list of types like meat, vegetable)
+    this.getIngredients()
   }
 
   getIngredients = () => {
@@ -50,6 +58,7 @@ class Search extends Component {
   }
 
 
+
   openModal = (type) => {
     let modalIsOpenCopy = this.state.modalIsOpen
     modalIsOpenCopy[type] = true
@@ -83,20 +92,32 @@ class Search extends Component {
 
   delIngredFromList = (ingred) => {
     let addIngred = this.state.addIngred
-    let updateList = addIngred.filter(item => item != ingred)
+    let updateList = addIngred.filter(item => item !== ingred)
     this.setState({
       addIngred: updateList
     })
   }
 
 
-
-  componentDidMount() {
-    // this is called to populate the state variables: ingredAll
-    // and ingredGroup (list of types like meat, vegetable)
-    this.getIngredients()
+  getRecipeList = () => {
+    let ingredList = this.state.addIngred
+    console.log(ingredList)
+    API.getRecipeList(ingredList)
+      .then(res => {
+        console.log("----->")
+        console.log(res)
+        console.log("------RECIPE LIST-----")
+        console.log(res.data)
+        this.setState({
+          recipeList: res.data
+        }, () => {
+          this.props.history.push({
+            pathname: '/result',
+            state: {recipeList: res.data}
+          })
+        } )
+      })
   }
-
 
   render() {
     return (
@@ -107,6 +128,7 @@ class Search extends Component {
             {this.state.ingredGroup.map(group => {
               return (
                 <IngredGroupCard
+                  key = {group.type}
                   type={group.type}
                   modalOpen={() => this.openModal(group.type)}
                   typeImgURL={group.typeImgURL}
@@ -118,6 +140,7 @@ class Search extends Component {
           <IngredSelectedSect>
             {this.state.addIngred.map(item => (
               <IngredAdd
+                key={item}
                 deleteMe = {() => this.delIngredFromList(item)}
               >{item}</IngredAdd>
             ))}
@@ -127,6 +150,7 @@ class Search extends Component {
           {Object.entries(this.state.ingredAll).map(([type, ingredList]) => {
             return (
               <IngredModal
+                key={type}
                 modalIsOpen={this.state.modalIsOpen[type]}
                 closeModal={() => this.closeModal(type)}
                 type={type}
@@ -134,6 +158,7 @@ class Search extends Component {
                 {ingredList.map((ingred, index) => {
                   return (
                     <IngredCard
+                      key = {ingred['name']}
                       ingredName={ingred['name']}
                       addToList={() => this.addIngredToList(ingred['name'], ingred['type'])}
                       ingredImgURL={ingred['nameImgURL']}
@@ -144,7 +169,8 @@ class Search extends Component {
             )
           })}
 
-
+            
+           <GetRecipeListBtn action={this.getRecipeList}>Search for Recipes</GetRecipeListBtn>
         </div>
 
       </div>
