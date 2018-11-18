@@ -36,19 +36,22 @@ const ingredientSeed = [
   {
     name: "Onion",
     type: "vegetable",
-    owner: "system", nameImgURL: "https://via.placeholder.com/150",
+    owner: "system",
+    nameImgURL: "https://via.placeholder.com/150",
     typeImgURL: "https://via.placeholder.com/150"
   },
   {
     name: "Mushroom",
     type: "vegetable",
-    owner: "system", nameImgURL: "https://via.placeholder.com/150",
+    owner: "system",
+    nameImgURL: "https://via.placeholder.com/150",
     typeImgURL: "https://via.placeholder.com/150"
   },
   {
     name: "Peas",
     type: "vegetable",
-    owner: "system", nameImgURL: "https://via.placeholder.com/150",
+    owner: "system",
+    nameImgURL: "https://via.placeholder.com/150",
     typeImgURL: "https://via.placeholder.com/150"
   },
   {
@@ -212,15 +215,6 @@ const ingredientSeed = [
     nameImgURL: "https://via.placeholder.com/150",
     typeImgURL: "https://via.placeholder.com/150"
   },
-  {
-    name: "chips",
-    type: "junk food",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
-  },
-
-
 ];
 
 db.Ingredient
