@@ -16,7 +16,7 @@ const ingredientSeed = [
     name: "Brocoli",
     type: "vegetable",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/testimage.jpg",
     typeImgURL: "https://via.placeholder.com/150"
   },
   {
