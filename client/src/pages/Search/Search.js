@@ -1,73 +1,180 @@
-import React, { Component } from "react";
-import API from "../../utils/API";
+import React, { Component } from "react"
+import API from "../../utils/API"
+import { IngredGroupSect, IngredGroupCard, IngredCard, IngredModal } from "../../components/Group"
+import { IngredSelectedSect, IngredAdd, GetRecipeListBtn } from "../../components/Selection"
 
 class Search extends Component {
+
   state = {
-    selectedIngred: [],
+    addIngred: ['chicken', 'tomato', 'banana'],
     ingredGroup: [],
-    ingredAll: [],
+    ingredAll: {},
+    modalIsOpen: {},
+    recipeList: []
+  }
+
+  componentDidMount() {
+    // this is called to populate the state variables: ingredAll
+    // and ingredGroup (list of types like meat, vegetable)
+    this.getIngredients()
   }
 
   getIngredients = () => {
     console.log("get Ingredients Groups to put into state")
+    // this first API call gets a list of the ingredient groups
+    // eg.  meat, seafood, dairy, vegetables
     API.getIngredGroup()
       .then(res => {
         const ingredGroup = res.data
         this.setState({
           ingredGroup: ingredGroup
-        }, () => { console.log("Hello!", this.state.ingredGroup) })
-      })
-    API.getIngredAll()
-      .then(res => {
-        console.log("All ingredients ", res.data)
+        }, () => {
+          console.log("These are the ingredient group acquired", this.state.ingredGroup)
+          // the second API call gest all the ingredients 
+          API.getIngredAll()
+            .then(res => {
+              let allIngredList = res.data
+              let groupList = this.state.ingredGroup
+              let modalTriggers = {}
+              // console.log("All ingredients ", allIngredList)
+              let ingredObj = {} // store ingredient per category, this is for the modals
+              for (let i = 0; i < groupList.length; i++) {
+                //set the modalIsOpen keys to false
+                modalTriggers[groupList[i]['type']] = false
+                // console.log(groupList[i]['type'], ":::", modalTriggers)
+                let filteredList = allIngredList.filter(ingred => ingred.type === groupList[i]['type'])
+                ingredObj[groupList[i]['type']] = filteredList
+              }
+              console.log("This is my dictionary group acquired!")
+              console.log(ingredObj)
+              this.setState({
+                ingredAll: ingredObj,
+                modalIsOpen: modalTriggers
+              })
+            })
+
+        })
       })
   }
 
-  componentDidMount() {
-    this.getIngredients()
+
+
+  openModal = (type) => {
+    let modalIsOpenCopy = this.state.modalIsOpen
+    modalIsOpenCopy[type] = true
+    let newList = this.state.ingredAll[type]
+    console.log("list of everything", typeof (newList), newList[0]['name'])
+    this.setState({
+      modalIsOpen: modalIsOpenCopy
+    })
+  }
+
+
+  closeModal = (type) => {
+    let modalIsOpenCopy = this.state.modalIsOpen
+    modalIsOpenCopy[type] = false
+    this.setState({
+      modalIsOpen: modalIsOpenCopy
+    })
+  }
+
+
+  addIngredToList = (ingred, type) => {
+    let addIngred = this.state.addIngred
+    if (addIngred.indexOf(ingred) < 0) {
+      addIngred.push(ingred)
+    }
+    this.closeModal(type)
+    this.setState({
+      addIngred
+    })
+  }
+
+  delIngredFromList = (ingred) => {
+    let addIngred = this.state.addIngred
+    let updateList = addIngred.filter(item => item !== ingred)
+    this.setState({
+      addIngred: updateList
+    })
+  }
+
+
+  getRecipeList = () => {
+    let ingredList = this.state.addIngred
+    console.log(ingredList)
+    /*
+    API.getRecipeList(ingredList)
+      .then(res => {
+        console.log("----->")
+        console.log(res)
+        console.log("------RECIPE LIST-----")
+        console.log(res.data)
+        this.setState({
+          recipeList: res.data
+        }, () => {
+          this.props.history.push({
+            pathname: '/result',
+            state: {recipeList: res.data}
+          })
+        } )
+      })
+    */
   }
 
   render() {
     return (
       <div>
-        <h1>I am on Search Page</h1>
-
         <div className="container">
 
-          <div className="card">
-            <div className="card-header">
-              Pick Your Ingredient
-            </div>
-            <div className="card-body">
-              <div className="card-group">
-                {this.state.ingredGroup.map(group => {
+          <IngredGroupSect>
+            {this.state.ingredGroup.map(group => {
+              return (
+                <IngredGroupCard
+                  key = {group.type}
+                  type={group.type}
+                  modalOpen={() => this.openModal(group.type)}
+                  typeImgURL={group.typeImgURL}
+                />
+              )
+            })}
+          </IngredGroupSect>
+
+          <IngredSelectedSect>
+            {this.state.addIngred.map(item => (
+              <IngredAdd
+                key={item}
+                deleteMe = {() => this.delIngredFromList(item)}
+              >{item}</IngredAdd>
+            ))}
+          </IngredSelectedSect>
+
+
+          {Object.entries(this.state.ingredAll).map(([type, ingredList]) => {
+            return (
+              <IngredModal
+                key={type}
+                modalIsOpen={this.state.modalIsOpen[type]}
+                closeModal={() => this.closeModal(type)}
+                type={type}
+              >
+                {ingredList.map((ingred, index) => {
                   return (
-                    <div className="card img-fluid">
-                      <img className="card-img-top" src={group.typeImgURL} alt={group.type.toUpperCase()} />
-                      <div className="card-img-overlay">
-                        <h4 className="card-text">{group.type.toUpperCase()}</h4>
-                      </div>
-                    </div>
+                    <IngredCard
+                      key = {ingred['name']}
+                      ingredName={ingred['name']}
+                      addToList={() => this.addIngredToList(ingred['name'], ingred['type'])}
+                      ingredImgURL={ingred['nameImgURL']}
+                    />
                   )
                 })}
-              </div>
+              </IngredModal>
+            )
+          })}
 
-            </div>
-
-          </div>
-
-
-          <div className="card">
-            <div className="card-header">
-              Ingredient List Selected
-            </div>
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">Cras justo odio</li>
-              <li className="list-group-item">Dapibus ac facilisis in</li>
-              <li className="list-group-item">Vestibulum at eros</li>
-            </ul>
-          </div>
+            
+           <GetRecipeListBtn action={this.getRecipeList}>Search for Recipes</GetRecipeListBtn>
         </div>
+
       </div>
     )
   }
