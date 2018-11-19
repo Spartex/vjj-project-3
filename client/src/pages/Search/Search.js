@@ -62,8 +62,7 @@ class Search extends Component {
   openModal = (type) => {
     let modalIsOpenCopy = this.state.modalIsOpen
     modalIsOpenCopy[type] = true
-    let newList = this.state.ingredAll[type]
-    console.log("list of everything", typeof (newList), newList[0]['name'])
+    console.log("Open modal for: ", type)
     this.setState({
       modalIsOpen: modalIsOpenCopy
     })
@@ -73,6 +72,7 @@ class Search extends Component {
   closeModal = (type) => {
     let modalIsOpenCopy = this.state.modalIsOpen
     modalIsOpenCopy[type] = false
+    console.log("Close modal for: ", type)
     this.setState({
       modalIsOpen: modalIsOpenCopy
     })
@@ -102,6 +102,10 @@ class Search extends Component {
   getRecipeList = () => {
     let ingredList = this.state.addIngred
     console.log(ingredList)
+    // placeholder below forwarding
+    this.props.history.push({
+      pathname: '/result',
+    })
     /*
     API.getRecipeList(ingredList)
       .then(res => {
