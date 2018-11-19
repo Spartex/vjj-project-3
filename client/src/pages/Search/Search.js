@@ -102,6 +102,7 @@ class Search extends Component {
   getRecipeList = () => {
     let ingredList = this.state.addIngred
     console.log(ingredList)
+    /*
     API.getRecipeList(ingredList)
       .then(res => {
         console.log("----->")
@@ -117,6 +118,7 @@ class Search extends Component {
           })
         } )
       })
+    */
   }
 
   render() {
