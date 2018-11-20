@@ -1,1 +1,2 @@
-export { Login, Register } from "./Login.js";
+export { default } from "./Login.js"
+

@@ -1,71 +1,73 @@
 import React, { Component } from "react";
-import {RecipeListSect, RecipeBrief, recipeDetModal } from "../../components/ResultsList"
+import { RecipeListSect, RecipeBrief, recipeDetModal } from "../../components/ResultsList"
 import API from "../../utils/API"
+import NavBar from "../../components/NavBar"
 
 class Result extends Component {
 
-  state = {
-    recipeList: [],
-    modalIsOpen: {},
+    state = {
+        recipeList: [],
+        modalIsOpen: {},
 
-  }
+    }
 
-  componentDidMount() {
-    console.log(this.props)
-  }
+    componentDidMount() {
+        console.log(this.props)
+    }
 
-  openModal = (recipeID) => {
-    let modalIsOpenCopy = this.state.modalIsOpen
-    modalIsOpenCopy[recipeID] = true
-    console.log("Open modal for: ", recipeID)
-    this.setState({
-      modalIsOpen: modalIsOpenCopy
-    })
-  }
+    openModal = (recipeID) => {
+        let modalIsOpenCopy = this.state.modalIsOpen
+        modalIsOpenCopy[recipeID] = true
+        console.log("Open modal for: ", recipeID)
+        this.setState({
+            modalIsOpen: modalIsOpenCopy
+        })
+    }
 
 
-  closeModal = (recipeID) => {
-    let modalIsOpenCopy = this.state.modalIsOpen
-    modalIsOpenCopy[recipeID] = false
-    console.log("Close modal for: ", recipeID)
-    this.setState({
-      modalIsOpen: modalIsOpenCopy
-    })
-  }
+    closeModal = (recipeID) => {
+        let modalIsOpenCopy = this.state.modalIsOpen
+        modalIsOpenCopy[recipeID] = false
+        console.log("Close modal for: ", recipeID)
+        this.setState({
+            modalIsOpen: modalIsOpenCopy
+        })
+    }
 
-  getRecipeDetails = (recipeID) => {
-      console.log("get Details!")
-      /*
-      API.getRecipeDetails(recipeID)
-        .then(res => res.data)
-      */
-     // open modal with propreties 
-     // dispaly 
-  }
+    getRecipeDetails = (recipeID) => {
+        console.log("get Details!")
+        /*
+        API.getRecipeDetails(recipeID)
+          .then(res => res.data)
+        */
+        // open modal with propreties 
+        // dispaly 
+    }
 
-  render() {
-    return (
-      <div>
-        <div className="container">
-          <RecipeListSect>
-          {this.props.location.state.recipeList.map(recipe => {
-                return (
-                  <RecipeBrief
-                    key = {recipe.id}
-                    title = {recipe.title}
-                    image = {recipe.image}
-                    id = {recipe.id}
-                    likes = {recipe.likes}
-                    getDetails = {() => this.getRecipeDetails(recipe.id)}
-                  />
-                )
-              })}
-          </RecipeListSect>
-        </div>
-      </div>
+    render() {
+        return (
+            <div>
+                <NavBar />
+                <div className="container">
+                    <RecipeListSect>
+                        {this.props.location.state.recipeList.map(recipe => {
+                            return (
+                                <RecipeBrief
+                                    key={recipe.id}
+                                    title={recipe.title}
+                                    image={recipe.image}
+                                    id={recipe.id}
+                                    likes={recipe.likes}
+                                    getDetails={() => this.getRecipeDetails(recipe.id)}
+                                />
+                            )
+                        })}
+                    </RecipeListSect>
+                </div>
+            </div>
 
-    )
-  }
+        )
+    }
 }
 
 export default Result;

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import API from "../../utils/API"
 import { IngredGroupSect, IngredGroupCard, IngredCard, IngredModal } from "../../components/Group"
 import { IngredSelectedSect, IngredAdd, GetRecipeListBtn } from "../../components/Selection"
-
+import NavBar from "../../components/NavBar"
 
 // below testRecipes and testRecipelist is placeholder in lieu of actual API calls
 let testRecipes = []
@@ -291,6 +291,7 @@ class Search extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <div className="container">
 
           <IngredGroupSect>

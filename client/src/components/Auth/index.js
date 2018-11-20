@@ -1,1 +1,2 @@
-export { LoginForm, RegisterForm } from "./LoginForm.js";
+export * from "./LoginForm.js";
+export * from "./RegisterForm.js"

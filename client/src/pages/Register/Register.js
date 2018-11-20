@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { LoginForm }  from "../../components/Auth"
+import { RegisterForm }  from "../../components/Auth"
 
 
-class Login extends Component {
+class Register extends Component {
   state = {
     userName: "",
     passWord: ""
@@ -11,11 +11,11 @@ class Login extends Component {
   render() {
     return (
       <div className="container">
-      <p>Login page!</p>
-      <LoginForm />
+      <p>Register page!</p>
+      <RegisterForm />
       </div>
     )
   }
 }
 
-export default Login;
+export default Register
