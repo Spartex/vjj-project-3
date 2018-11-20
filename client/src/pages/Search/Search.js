@@ -3,6 +3,153 @@ import API from "../../utils/API"
 import { IngredGroupSect, IngredGroupCard, IngredCard, IngredModal } from "../../components/Group"
 import { IngredSelectedSect, IngredAdd, GetRecipeListBtn } from "../../components/Selection"
 
+
+// below testRecipes and testRecipelist is placeholder in lieu of actual API calls
+let testRecipes = []
+let testRecipeList = [
+  {
+    "id": 618390,
+    "title": "Quick Apple Pies",
+    "image": "https://spoonacular.com/recipeImages/618390-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 1005
+  },
+  {
+    "id": 615374,
+    "title": "Mom's Apple Pie",
+    "image": "https://spoonacular.com/recipeImages/615374-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 434
+  },
+  {
+    "id": 556470,
+    "title": "Apple fritters",
+    "image": "https://spoonacular.com/recipeImages/556470-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 243
+  },
+  {
+    "id": 611026,
+    "title": "Apple Crisp III",
+    "image": "https://spoonacular.com/recipeImages/611026-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 138
+  },
+  {
+    "id": 599133,
+    "title": "Upside-Down Caramelized Apple Tart",
+    "image": "https://spoonacular.com/recipeImages/599133-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 57
+  },
+  {
+    "id": 73474,
+    "title": "Apple Turnovers",
+    "image": "https://spoonacular.com/recipeImages/73474-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 48
+  },
+  {
+    "id": 47950,
+    "title": "Cinnamon Apple Crisp",
+    "image": "https://spoonacular.com/recipeImages/47950-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 35
+  },
+  {
+    "id": 601227,
+    "title": "Classic Apple Crisp",
+    "image": "https://spoonacular.com/recipeImages/601227-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 27
+  },
+  {
+    "id": 597993,
+    "title": "Rustic Apple Tarts",
+    "image": "https://spoonacular.com/recipeImages/597993-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 19
+  },
+  {
+    "id": 628564,
+    "title": "Nasoya Apple Hand Pies with a Cinnamon and Sugar Crunch",
+    "image": "https://spoonacular.com/recipeImages/628564-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 0,
+    "likes": 11
+  }
+]
+let testRecipeList2 = [
+  {
+      "id": 504291,
+      "title": "Crockpot Honey Mustard Chicken",
+      "image": "https://spoonacular.com/recipeImages/504291-312x231.jpg",
+      "imageType": "jpg",
+      "usedIngredientCount": 1,
+      "missedIngredientCount": 2,
+      "likes": 10682
+  },
+  {
+      "id": 983395,
+      "title": "Beer Can Chicken",
+      "image": "https://spoonacular.com/recipeImages/983395-312x231.jpeg",
+      "imageType": "jpeg",
+      "usedIngredientCount": 1,
+      "missedIngredientCount": 2,
+      "likes": 10
+  },
+  {
+      "id": 287151,
+      "title": "Apple Cider Brined Chicken",
+      "image": "https://spoonacular.com/recipeImages/287151-312x231.jpeg",
+      "imageType": "jpeg",
+      "usedIngredientCount": 1,
+      "missedIngredientCount": 2,
+      "likes": 4
+  },
+  {
+      "id": 30794,
+      "title": "Smoky Roasted Cauliflower",
+      "image": "https://spoonacular.com/recipeImages/30794-312x231.jpg",
+      "imageType": "jpg",
+      "usedIngredientCount": 1,
+      "missedIngredientCount": 2,
+      "likes": 0
+  },
+  {
+      "id": 282731,
+      "title": "How to Roast a Chicken",
+      "image": "https://spoonacular.com/recipeImages/282731-312x231.jpg",
+      "imageType": "jpg",
+      "usedIngredientCount": 1,
+      "missedIngredientCount": 2,
+      "likes": 0
+  }
+]
+
+testRecipes.push(testRecipeList)
+testRecipes.push(testRecipeList2)
+
+
 class Search extends Component {
 
   state = {
@@ -10,7 +157,8 @@ class Search extends Component {
     ingredGroup: [],
     ingredAll: {},
     modalIsOpen: {},
-    recipeList: []
+    recipeList: [],
+    searching: false
   }
 
   componentDidMount() {
@@ -100,12 +248,27 @@ class Search extends Component {
 
 
   getRecipeList = () => {
+
+    // grab recipe list 
     let ingredList = this.state.addIngred
     console.log(ingredList)
-    // placeholder below forwarding
-    this.props.history.push({
-      pathname: '/result',
+
+    // update searching variable to "true"
+    // this will disable the search button 
+    // and change the button text from "search" to "searching"
+    this.setState({
+      searching: true
     })
+    
+    // this simulates the search for testing purposes
+    let randomIndex = Math.floor(Math.random()*testRecipes.length) 
+    setTimeout ( () => { this.props.history.push({
+      pathname: '/result',
+      state: {recipeList: testRecipes[randomIndex] },
+    })}, 1000)
+
+
+    // this is the real search below
     /*
     API.getRecipeList(ingredList)
       .then(res => {
@@ -176,7 +339,7 @@ class Search extends Component {
           })}
 
             
-           <GetRecipeListBtn action={this.getRecipeList}>Search for Recipes</GetRecipeListBtn>
+           <GetRecipeListBtn searching = {this.state.searching} action={this.getRecipeList}>Search for Recipes</GetRecipeListBtn>
         </div>
 
       </div>

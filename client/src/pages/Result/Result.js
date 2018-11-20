@@ -1,101 +1,11 @@
 import React, { Component } from "react";
-import {RecipeListSect, RecipeBrief } from "../../components/ResultsList"
+import {RecipeListSect, RecipeBrief, recipeDetModal } from "../../components/ResultsList"
+import API from "../../utils/API"
 
 class Result extends Component {
 
   state = {
-    recipeList: [
-      {
-        "id": 618390,
-        "title": "Quick Apple Pies",
-        "image": "https://spoonacular.com/recipeImages/618390-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 1005
-      },
-      {
-        "id": 615374,
-        "title": "Mom's Apple Pie",
-        "image": "https://spoonacular.com/recipeImages/615374-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 434
-      },
-      {
-        "id": 556470,
-        "title": "Apple fritters",
-        "image": "https://spoonacular.com/recipeImages/556470-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 243
-      },
-      {
-        "id": 611026,
-        "title": "Apple Crisp III",
-        "image": "https://spoonacular.com/recipeImages/611026-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 138
-      },
-      {
-        "id": 599133,
-        "title": "Upside-Down Caramelized Apple Tart",
-        "image": "https://spoonacular.com/recipeImages/599133-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 57
-      },
-      {
-        "id": 73474,
-        "title": "Apple Turnovers",
-        "image": "https://spoonacular.com/recipeImages/73474-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 48
-      },
-      {
-        "id": 47950,
-        "title": "Cinnamon Apple Crisp",
-        "image": "https://spoonacular.com/recipeImages/47950-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 35
-      },
-      {
-        "id": 601227,
-        "title": "Classic Apple Crisp",
-        "image": "https://spoonacular.com/recipeImages/601227-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 27
-      },
-      {
-        "id": 597993,
-        "title": "Rustic Apple Tarts",
-        "image": "https://spoonacular.com/recipeImages/597993-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 19
-      },
-      {
-        "id": 628564,
-        "title": "Nasoya Apple Hand Pies with a Cinnamon and Sugar Crunch",
-        "image": "https://spoonacular.com/recipeImages/628564-312x231.jpg",
-        "imageType": "jpg",
-        "usedIngredientCount": 3,
-        "missedIngredientCount": 0,
-        "likes": 11
-      }
-    ],
+    recipeList: [],
     modalIsOpen: {},
 
   }
@@ -123,16 +33,30 @@ class Result extends Component {
     })
   }
 
+  getRecipeDetails = (recipeID) => {
+      console.log("get Details!")
+      /*
+      API.getRecipeDetails(recipeID)
+        .then(res => res.data)
+      */
+     // open modal with propreties 
+     // dispaly 
+  }
+
   render() {
     return (
       <div>
         <div className="container">
           <RecipeListSect>
-          {this.state.recipeList.map(recipe => {
+          {this.props.location.state.recipeList.map(recipe => {
                 return (
                   <RecipeBrief
+                    key = {recipe.id}
                     title = {recipe.title}
                     image = {recipe.image}
+                    id = {recipe.id}
+                    likes = {recipe.likes}
+                    getDetails = {() => this.getRecipeDetails(recipe.id)}
                   />
                 )
               })}
@@ -332,6 +256,54 @@ export default Result;
     ]
 
 
+search list for chicken
+[
+    {
+        "id": 504291,
+        "title": "Crockpot Honey Mustard Chicken",
+        "image": "https://spoonacular.com/recipeImages/504291-312x231.jpg",
+        "imageType": "jpg",
+        "usedIngredientCount": 1,
+        "missedIngredientCount": 2,
+        "likes": 10682
+    },
+    {
+        "id": 983395,
+        "title": "Beer Can Chicken",
+        "image": "https://spoonacular.com/recipeImages/983395-312x231.jpeg",
+        "imageType": "jpeg",
+        "usedIngredientCount": 1,
+        "missedIngredientCount": 2,
+        "likes": 10
+    },
+    {
+        "id": 287151,
+        "title": "Apple Cider Brined Chicken",
+        "image": "https://spoonacular.com/recipeImages/287151-312x231.jpeg",
+        "imageType": "jpeg",
+        "usedIngredientCount": 1,
+        "missedIngredientCount": 2,
+        "likes": 4
+    },
+    {
+        "id": 30794,
+        "title": "Smoky Roasted Cauliflower",
+        "image": "https://spoonacular.com/recipeImages/30794-312x231.jpg",
+        "imageType": "jpg",
+        "usedIngredientCount": 1,
+        "missedIngredientCount": 2,
+        "likes": 0
+    },
+    {
+        "id": 282731,
+        "title": "How to Roast a Chicken",
+        "image": "https://spoonacular.com/recipeImages/282731-312x231.jpg",
+        "imageType": "jpg",
+        "usedIngredientCount": 1,
+        "missedIngredientCount": 2,
+        "likes": 0
+    }
+]
 
 
 //  recipe info for ID: 615374   title:  Mom's Apple Pie
@@ -642,5 +614,219 @@ export default Result;
 }
 
 
+
+   "id": 504291,
+    "title": "Crockpot Honey Mustard Chicken",
+ 
+
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": true,
+    "dairyFree": true,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": true,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 10,
+    "gaps": "no",
+    "lowFodmap": false,
+    "ketogenic": false,
+    "whole30": false,
+    "sourceUrl": "http://eatathomecooks.com/2009/07/crockpot-honey-mustard-chicken.html",
+    "spoonacularSourceUrl": "https://spoonacular.com/crockpot-honey-mustard-chicken-504291",
+    "aggregateLikes": 10682,
+    "spoonacularScore": 50,
+    "healthScore": 3,
+    "creditText": "Eat at Home Cooks",
+    "sourceName": "Eat at Home Cooks",
+    "pricePerServing": 105.77,
+    "extendedIngredients": [
+        {
+            "id": 1002046,
+            "aisle": "Condiments",
+            "image": "dijon-mustard.jpg",
+            "consitency": "liquid",
+            "name": "dijon mustard",
+            "original": "1/4 cup dijon mustard",
+            "originalString": "1/4 cup dijon mustard",
+            "originalName": null,
+            "amount": 0.25,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 59.147,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 19296,
+            "aisle": "Nut butters, Jams, and Honey",
+            "image": "honey.jpg",
+            "consitency": "liquid",
+            "name": "honey",
+            "original": "1/2 cup honey",
+            "originalString": "1/2 cup honey",
+            "originalName": null,
+            "amount": 0.5,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 118.294,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 1102047,
+            "aisle": "Spices and Seasonings",
+            "image": "salt-and-pepper.jpg",
+            "consitency": "solid",
+            "name": "salt and pepper",
+            "original": "salt and pepper to taste",
+            "originalString": "salt and pepper to taste",
+            "originalName": null,
+            "amount": 8,
+            "unit": "servings",
+            "meta": [
+                "to taste"
+            ],
+            "metaInformation": [
+                "to taste"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 8,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 8,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 5006,
+            "aisle": "Meat",
+            "image": "whole-chicken.jpg",
+            "consitency": "liquid",
+            "name": "whole chicken",
+            "original": "whole chicken, cut up (or the equivalent in chicken pieces)",
+            "originalString": "whole chicken, cut up (or the equivalent in chicken pieces)",
+            "originalName": null,
+            "amount": 8,
+            "unit": "servings",
+            "meta": [
+                "whole",
+                "(or the equivalent in chicken pieces)"
+            ],
+            "metaInformation": [
+                "whole",
+                "(or the equivalent in chicken pieces)"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 8,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 8,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        }
+    ],
+    "id": 504291,
+    "title": "Crockpot Honey Mustard Chicken",
+    "readyInMinutes": 45,
+    "servings": 8,
+    "image": "https://spoonacular.com/recipeImages/504291-556x370.jpg",
+    "imageType": "jpg",
+    "cuisines": [],
+    "dishTypes": [
+        "lunch",
+        "main course",
+        "main dish",
+        "dinner"
+    ],
+    "diets": [
+        "gluten free",
+        "dairy free",
+        "paleolithic",
+        "primal"
+    ],
+    "occasions": [],
+    "winePairing": {},
+    "instructions": "Mix the honey, mustard, salt and pepper together in a small bowl.  Put the chicken in the crockpot and pour the mixture over the top.  Cook on high for 6-8 hours.",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Mix the honey, mustard, salt and pepper together in a small bowl.",
+                    "ingredients": [
+                        {
+                            "id": 1102047,
+                            "name": "salt and pepper",
+                            "image": "salt-and-pepper.jpg"
+                        },
+                        {
+                            "id": 2046,
+                            "name": "mustard",
+                            "image": "regular-mustard.jpg"
+                        },
+                        {
+                            "id": 19296,
+                            "name": "honey",
+                            "image": "honey.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404783,
+                            "name": "bowl",
+                            "image": "bowl.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "step": "Put the chicken in the crockpot and pour the mixture over the top.  Cook on high for 6-8 hours.",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404718,
+                            "name": "slow cooker",
+                            "image": "slow-cooker.jpg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "creditsText": "Eat at Home Cooks"
+}
 
 */

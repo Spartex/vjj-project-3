@@ -18,6 +18,8 @@ export default {
     const params = {'ingredient':ingredStr}
     console.log(params)
     return axios.get("/api/recipe/ingredient", {params})
+  },
+  getRecipeDetails: function (recipeID) {
+    return axios.get("/api/recipe/id/"+recipeID)
   }
-
 };
