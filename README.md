@@ -1,3 +1,25 @@
+## steps to start the Recipe App
+1.  Startup MongoDB 
+     * mongod
+
+1.  cd into the directory where the cloned repository is
+     * cd ./vjj-project-3
+
+1.  install dependencies
+     * yarn install
+
+1.  cd into the directory to seed the files for the ingredients
+     * cd ./vjj-project-3/scripts
+
+1.  run the seed file to put in all the ingredients for the display.. Please update this file with better ingredients as needed
+     * node seedDB.js   
+
+1.  create ".env" file in the ./vjj-project-3  directory.  And copy the contents of the API keys in there (see slack)
+
+1.  start the files 
+    * yarn start
+
+
 # Create React Express App
 
 ## About This Boilerplate
