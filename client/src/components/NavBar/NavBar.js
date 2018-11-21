@@ -24,7 +24,7 @@ class NavBar extends Component {
 
     return (
       <nav className="rwnav navbar navbar-expand-sm bg-light navbar-light">
-        <a className="navbar-brand" href="/">Recipe Warrior</a>
+        <a className="navbar-brand" href="/">Home</a>
         <button onClick={this.toggleNavBar} className={classTwo} type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +37,10 @@ class NavBar extends Component {
               <a className="nav-link" href="/saved">Saved</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/login">Logout</a>
+              <a className="nav-link" href="/login">Login</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/SignUp">Sign Up</a>
             </li>
           </ul>
         </div>

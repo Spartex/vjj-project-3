@@ -1,3 +1,4 @@
 module.exports = {
-  Ingredient: require("./ingredient")
+  Ingredient: require("./ingredient"),
+  User: require("./user")
 };
