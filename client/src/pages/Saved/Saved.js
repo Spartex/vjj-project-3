@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavBar from "../../components/NavBar"
 
 class Saved extends Component {
   state = {
@@ -7,7 +8,13 @@ class Saved extends Component {
   }
 
   render() {
-    return (<h1>I am on Saved Page</h1>)
+    return (
+      <div>
+        <NavBar />
+        <h1>I am on Saved Page</h1>
+      </div>
+    
+    )
   }
 }
 
