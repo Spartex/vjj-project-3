@@ -37,7 +37,10 @@ class NavBar extends Component {
               <a className="nav-link" href="/saved">Saved</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/login">Logout</a>
+              <a className="nav-link" href="/login">Login</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/SignUp">Sign Up</a>
             </li>
           </ul>
         </div>
