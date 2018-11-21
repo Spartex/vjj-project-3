@@ -1,5 +1,6 @@
-import React from "react";
-import "./recipeDetModal.css"
+import React, { Component } from "react";
+import API from "../../utils/API"
+import "./RecipeDetModal.css"
 
 /*
 // recipeID:   id
@@ -21,30 +22,56 @@ I/
 
 */
 
-export const RecipeDetModal = props => {
-    return (
-        <div>
-            <div className={props.modalIsOpen ? "modal fade show" : "modal fade"} style={props.modalIsOpen ? { display: "block" } : { display: "none" }} id="myModal">
-                <div className="modal-dialog modal-lg">
-                    <div className="modal-content">
+export class RecipeDetModal extends Component {
 
-                        <div className="modal-header">
-                            <h4 className="modal-title">Add your {props.type}</h4>
-                            <button type="button" className="close" data-dismiss="modal" onClick={props.closeModal}>&times;</button>
-                        </div>
-                        <div className="modal-body">
-                            <div className="card-columns">
-                                {props.children}
+    state = {
+        loading: true,
+        recipeDetails: {}
+    }
+
+    componentDidMount() {
+        // get recipe details
+        console.log("Loading the Data formthe API for recipe details?")
+        console.log(this.props.id)
+        /*  disabled to save API data
+        API.getRecipeDetails(this.props.id)
+            .then(res => {
+                console.log("Loading the Data formthe API for recipe details?")
+                console.log(res.data)
+            })
+        */
+        this.setState({
+            loading: false
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                <div className={this.props.modalIsOpen ? "modal fade show" : "modal fade"} style={this.props.modalIsOpen ? { display: "block" } : { display: "none" }} id="myModal">
+                    <div className="modal-dialog modal-lg">
+                        <div className="modal-content">
+
+                            <div className="modal-header">
+                                <h4 className="modal-title">{this.props.title}</h4>
+                                <button type="button" className="close" data-dismiss="modal" onClick={this.props.closeModal}>&times;</button>
                             </div>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={props.closeModal}>Close</button>
+                            <div className="modal-body">
+                                <img src={this.props.image} alt={this.props.title}></img>
+                                <h4> { this.state.loading ? "Loading Recipe Information..." : "" } </h4>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-danger">Save</button>
+                                <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={this.props.closeModal}>Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div className={this.props.modalIsOpen ? "modal-backdrop fade show" : ""}></div>
             </div>
-            <div className={props.modalIsOpen ? "modal-backdrop fade show" : ""}></div>
-        </div>
-    )
+        )
+
+    }
+
 }
 
