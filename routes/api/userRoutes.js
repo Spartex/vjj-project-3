@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
             })
         }
         else {
-            const newUser = new User({
+            const newUser = new db.User({
                 username: username,
                 password: password
             })
