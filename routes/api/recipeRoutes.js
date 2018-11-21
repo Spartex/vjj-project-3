@@ -5,7 +5,7 @@ const axios = require("axios");
 router.get("/ingredient", (req, res) => {
   console.log("api search ingredient API got called!")
   const search = req.query.ingredient
-  const params = { 'ingredients': search}
+  const params = { 'ingredients': search, 'numbers':10 }
   const headers = { 
     'X-Mashape-Key': process.env.SPOONKEY,
     'X-Mashape-Host': process.env.SPOONHOST
