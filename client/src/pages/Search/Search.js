@@ -336,7 +336,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar history={this.props.history} />
         <div className="container">
 
           <IngredGroupSect>

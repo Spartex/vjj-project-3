@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from 'react-router-dom'
+import API from "../../utils/API"
 import "./Navbar.css"
 
 class NavBar extends Component {
@@ -15,6 +15,15 @@ class NavBar extends Component {
     })
   }
 
+  logout = () => {
+    API.logoutUser()
+      .then(res => {
+        console.log(res.data)
+        this.props.history.push({
+          pathname: '/login'
+        })
+      })
+  }
 
   render() {
     const collapsed = this.state.collapsed
@@ -37,10 +46,7 @@ class NavBar extends Component {
               <a className="nav-link" href="/saved">Saved</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/login">Login</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/SignUp">Sign Up</a>
+              <a className="nav-link" onClick={this.logout}>Logout</a>
             </li>
           </ul>
         </div>

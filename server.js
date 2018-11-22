@@ -6,7 +6,6 @@ const morgan = require('morgan')
 
 const session = require('express-session')
 const mongoose = require("mongoose")
-const dbConnection = require("./models")
 const MongoStore = require('connect-mongo')(session)
 
 const passport = require('./passport')
