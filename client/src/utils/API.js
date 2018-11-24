@@ -39,7 +39,7 @@ export default {
     return axios.post("/api/auth/logout")
   },
   // register user
-  registerNewuser: function (username, password) {
+  registerNewUser: function (username, password) {
     let regInfo = { username, password }
     return axios.post("/api/auth", regInfo)
   }

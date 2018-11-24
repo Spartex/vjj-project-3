@@ -29,7 +29,7 @@ export class LoginForm extends Component {
     console.log("I am in Redirectin! ", localPath, this.state.username)
     this.props.history.push({
       pathname: '/search',
-      state: { username: this.state.username}
+      state: { username: this.state.username }
     })
   }
 
@@ -43,7 +43,7 @@ export class LoginForm extends Component {
         msg = res.data
         let redirectURL = this.props.sourceURL || "/search"
         this.setState({
-          errorMessage:""
+          errorMessage: ""
         })
         this.redirectTo(redirectURL)
       })
@@ -55,38 +55,54 @@ export class LoginForm extends Component {
           console.log(err.response.headers)
           msg = err.response.data + " || " + err.response.status
         }
-        this.setState ({
+        this.setState({
           errorMessage: msg
         })
 
       })
-  } 
-
+  }
+  
+  // https://medium.com/wdstack/bootstrap-4-form-examples-c18ac5e9cd30
+  // bootstrap 4 register form,  
   render() {
     return (
-        <form>
-          <h1 onClick={this.loginUser}>Login Component</h1>
-          <div className="form-group">
-            <label htmlFor="exampleInputEmail1">UserName</label>
-            <input type="text" className="form-control" id="exampleInput" name="username" value={this.state.username} onChange={this.handleChange} aria-describedby="emailHelp" placeholder="Enter Username" />
-            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div className="form-group">
-            <label htmlFor="exampleInputPassword1">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
-          </div>
-          <div className="form-group form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit"  onClick={this.handleSubmit} className="btn btn-primary">Submit</button>
-          <hr></hr>
-          <h4>{this.state.errorMessage}</h4>
-        </form>
+      <div>
 
+
+        <div className="card rounded-0">
+          <div className="card-header">
+            <h3 className="mb-0">Login</h3>
+          </div>
+          <div className="card-body">
+            <form className="form" role="form" autoComplete="off" id="formLogin" noValidate="">
+              <div className="form-group">
+                <label htmlFor="uname1">Username</label>
+                <input type="text" className="form-control form-control-lg rounded-0" placeholder = "Enter username" name="username" value={this.state.username} onChange={this.handleChange}  id="uname1" required="" />
+                <div className="invalid-feedback">Oops, you missed this one.</div>
+              </div>
+              <div className="form-group">
+                <label>Password</label>
+                <input type="password" className="form-control form-control-lg rounded-0" id="pwd1" required="" autoComplete="new-password" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password"/>
+                <div className="invalid-feedback">Enter your password too!</div>
+              </div>
+              <div>
+                <label className="custom-control custom-checkbox">
+                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                  <span className="custom-control-indicator"></span>
+                  <span className="custom-control-description small text-dark">Remember me on this computer</span>
+                </label>
+              </div>
+              <button type="submit" className="btn btn-success btn-lg float-right" id="btnLogin" onClick={this.handleSubmit}>Login</button>
+            </form>
+            <h4>{this.state.errorMessage}</h4>
+            
+          </div>
+          
+        </div>
+        <div><h4><a href="/register">Register Here</a></h4></div>
+      </div>
     )
   }
 }
-
 
 
