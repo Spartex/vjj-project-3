@@ -572,7 +572,7 @@ class Result extends Component {
     render() {
         return (
             <div>
-                <NavBar />
+                <NavBar history={this.props.history} />
                 <div className="container">
                     <RecipeListSect>
                         {this.props.location.state.recipeList.map(recipe => {

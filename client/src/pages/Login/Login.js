@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { LoginForm }  from "../../components/Auth"
 
+// https://stackoverflow.com/questions/44009618/uncaught-typeerror-cannot-read-property-push-of-undefined-react-router-dom
+// to use the props. history.push. it is part of the router package.  
 
 class Login extends Component {
   state = {
@@ -12,7 +14,7 @@ class Login extends Component {
     return (
       <div className="container">
       <p>Login page!</p>
-      <LoginForm />
+      <LoginForm {...this.props} />
       </div>
     )
   }
