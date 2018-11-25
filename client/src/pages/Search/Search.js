@@ -203,7 +203,9 @@ class Search extends Component {
     ingredAll: {},
     modalIsOpen: {},
     recipeList: [],
-    searching: false
+    searching: false,
+    loggedIn: false,
+    username: ""
   }
 
   componentDidMount() {
@@ -361,7 +363,7 @@ class Search extends Component {
         <NavBar history={this.props.history} />
         <div className="container">
 
-          <IngredGroupSect>
+          <IngredGroupSect prompt={this.state.username + ", pick you ingredient!"}>
             {this.state.ingredGroup.map(group => {
               return (
                 <IngredGroupCard
