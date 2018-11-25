@@ -1,0 +1,125 @@
+RecipeDetModal.js:551 Loading the Data from the API for recipe details?
+RecipeDetModal.js:552 3454
+RecipeDetModal.js:573 real recipe details load
+RecipeDetModal.js:551 Loading the Data from the API for recipe details?
+RecipeDetModal.js:552 89302
+RecipeDetModal.js:573 real recipe details load
+RecipeDetModal.js:551 Loading the Data from the API for recipe details?
+RecipeDetModal.js:552 89045
+RecipeDetModal.js:573 real recipe details load
+RecipeDetModal.js:551 Loading the Data from the API for recipe details?
+RecipeDetModal.js:552 267572
+RecipeDetModal.js:573 real recipe details load
+RecipeDetModal.js:551 Loading the Data from the API for recipe details?
+RecipeDetModal.js:552 154581
+RecipeDetModal.js:573 real recipe details load
+Result.js:533 {match: {…}, location: {…}, history: {…}, staticContext: undefined}
+webpackHotDevClient.js:136 ./src/pages/Result/Result.js
+  Line 3:    'API' is defined but never used               no-unused-vars
+  Line 537:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:136
+handleWarnings @ webpackHotDevClient.js:153
+./node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:206
+./node_modules/sockjs-client/lib/event/eventtarget.js.EventTarget.dispatchEvent @ eventtarget.js:51
+(anonymous) @ main.js:274
+./node_modules/sockjs-client/lib/main.js.SockJS._transportMessage @ main.js:272
+./node_modules/sockjs-client/lib/event/emitter.js.EventEmitter.emit @ emitter.js:50
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:136 ./src/components/Auth/LoginForm.js
+  Line 77:  The element form has an implicit role of form. Defining this explicitly is redundant and should be avoided  jsx-a11y/no-redundant-roles
+printWarnings @ webpackHotDevClient.js:136
+handleWarnings @ webpackHotDevClient.js:153
+./node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:206
+./node_modules/sockjs-client/lib/event/eventtarget.js.EventTarget.dispatchEvent @ eventtarget.js:51
+(anonymous) @ main.js:274
+./node_modules/sockjs-client/lib/main.js.SockJS._transportMessage @ main.js:272
+./node_modules/sockjs-client/lib/event/emitter.js.EventEmitter.emit @ emitter.js:50
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:136 ./src/components/Auth/RegisterForm.js
+  Line 71:  'redirectURL' is assigned a value but never used  no-unused-vars
+printWarnings @ webpackHotDevClient.js:136
+handleWarnings @ webpackHotDevClient.js:153
+./node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:206
+./node_modules/sockjs-client/lib/event/eventtarget.js.EventTarget.dispatchEvent @ eventtarget.js:51
+(anonymous) @ main.js:274
+./node_modules/sockjs-client/lib/main.js.SockJS._transportMessage @ main.js:272
+./node_modules/sockjs-client/lib/event/emitter.js.EventEmitter.emit @ emitter.js:50
+WebSocketTransport.ws.onmessage @ websocket.js:35
+RecipeDetModal.js:577 Mom Pat's Tuna and Noodles from Scratch
+RecipeDetModal.js:578 {vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, veryHealthy: false, …}aggregateLikes: 0analyzedInstructions: []length: 0__proto__: Array(0)cheap: falsecookingMinutes: 30creditText: "Food.com"creditsText: "Food.com"cuisines: []dairyFree: falsediets: ["pescatarian"]dishTypes: (5) ["side dish", "lunch", "main course", "main dish", "dinner"]extendedIngredients: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]gaps: "no"glutenFree: falsehealthScore: 31id: 89045image: "https://spoonacular.com/recipeImages/89045-556x370.jpg"imageType: "jpg"instructions: nullketogenic: falselowFodmap: falseoccasions: []preparationMinutes: 10pricePerServing: 153.48readyInMinutes: 40servings: 4sourceName: "Food.com"sourceUrl: "http://www.food.com/recipe/mom-pats-tuna-and-noodles-from-scratch-124896"spoonacularScore: 71spoonacularSourceUrl: "https://spoonacular.com/mom-pats-tuna-and-noodles-from-scratch-89045"sustainable: falsetitle: "Mom Pat's Tuna and Noodles from Scratch"vegan: falsevegetarian: falseveryHealthy: falseveryPopular: falseweightWatcherSmartPoints: 26whole30: falsewinePairing: {pairedWines: Array(0), pairingText: "No one wine will suit every pasta dish. Pasta in a…tion if you ask again with a specific pasta dish.", productMatches: Array(0)}__proto__: Object
+index.js:2177 Warning: Each child in an array or iterator should have a unique "key" prop.
+
+Check the render method of `RecipeDetModal`. See https://fb.me/react-warning-keys for more information.
+    in li (at RecipeDetModal.js:605)
+    in RecipeDetModal (at Result.js:588)
+    in div (at Result.js:580)
+    in div (at RecipeListSect.js:8)
+    in div (at RecipeListSect.js:6)
+    in RecipeListSect (at Result.js:577)
+    in div (at Result.js:576)
+    in div (at Result.js:574)
+    in Result (created by Route)
+    in Route (at App.js:26)
+    in Switch (at App.js:21)
+    in div (at App.js:19)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at App.js:18)
+    in App (at src/index.js:7)
+__stack_frame_overlay_proxy_console__ @ index.js:2177
+warningWithoutStack @ react.development.js:225
+warning @ react.development.js:629
+validateExplicitKey @ react.development.js:1577
+validateChildKeys @ react.development.js:1599
+createElementWithValidation @ react.development.js:1731
+render @ RecipeDetModal.js:604
+finishClassComponent @ react-dom.development.js:14301
+updateClassComponent @ react-dom.development.js:14264
+beginWork @ react-dom.development.js:15082
+performUnitOfWork @ react-dom.development.js:17820
+workLoop @ react-dom.development.js:17860
+renderRoot @ react-dom.development.js:17946
+performWorkOnRoot @ react-dom.development.js:18837
+performWork @ react-dom.development.js:18749
+performSyncWork @ react-dom.development.js:18723
+requestWork @ react-dom.development.js:18592
+scheduleWork @ react-dom.development.js:18401
+enqueueSetState @ react-dom.development.js:12313
+./node_modules/react/cjs/react.development.js.Component.setState @ react.development.js:372
+(anonymous) @ RecipeDetModal.js:580
+Promise.then (async)
+componentDidMount @ RecipeDetModal.js:574
+commitLifeCycles @ react-dom.development.js:15961
+commitAllLifeCycles @ react-dom.development.js:17262
+callCallback @ react-dom.development.js:149
+invokeGuardedCallbackDev @ react-dom.development.js:199
+invokeGuardedCallback @ react-dom.development.js:256
+commitRoot @ react-dom.development.js:17458
+completeRoot @ react-dom.development.js:18912
+performWorkOnRoot @ react-dom.development.js:18841
+performWork @ react-dom.development.js:18749
+performSyncWork @ react-dom.development.js:18723
+requestWork @ react-dom.development.js:18592
+scheduleWork @ react-dom.development.js:18401
+scheduleRootUpdate @ react-dom.development.js:19069
+updateContainerAtExpirationTime @ react-dom.development.js:19097
+updateContainer @ react-dom.development.js:19154
+./node_modules/react-dom/cjs/react-dom.development.js.ReactRoot.render @ react-dom.development.js:19416
+(anonymous) @ react-dom.development.js:19556
+unbatchedUpdates @ react-dom.development.js:18952
+legacyRenderSubtreeIntoContainer @ react-dom.development.js:19552
+render @ react-dom.development.js:19613
+./src/index.js @ index.js:7
+__webpack_require__ @ bootstrap 823ccbca09a2c9958611:669
+fn @ bootstrap 823ccbca09a2c9958611:87
+0 @ API.js:3
+__webpack_require__ @ bootstrap 823ccbca09a2c9958611:669
+(anonymous) @ bootstrap 823ccbca09a2c9958611:715
+(anonymous) @ bootstrap 823ccbca09a2c9958611:715
+RecipeDetModal.js:577 Tuna and Noodles
+RecipeDetModal.js:578 {vegetarian: false, vegan: false, glutenFree: false, dairyFree: true, veryHealthy: true, …}aggregateLikes: 3analyzedInstructions: []cheap: falsecookingMinutes: 6creditText: "Food.com"creditsText: "Food.com"cuisines: []dairyFree: truediets: (2) ["dairy free", "pescatarian"]dishTypes: (5) ["side dish", "lunch", "main course", "main dish", "dinner"]extendedIngredients: (5) [{…}, {…}, {…}, {…}, {…}]gaps: "no"glutenFree: falsehealthScore: 61id: 89302image: "https://spoonacular.com/recipeImages/89302-556x370.jpg"imageType: "jpg"instructions: nullketogenic: falselowFodmap: falseoccasions: []preparationMinutes: 2pricePerServing: 120.18readyInMinutes: 8servings: 5sourceName: "Food.com"sourceUrl: "http://www.food.com/recipe/tuna-and-noodles-289919"spoonacularScore: 95spoonacularSourceUrl: "https://spoonacular.com/tuna-and-noodles-89302"sustainable: falsetitle: "Tuna and Noodles"vegan: falsevegetarian: falseveryHealthy: trueveryPopular: falseweightWatcherSmartPoints: 10whole30: falsewinePairing: {pairedWines: Array(0), pairingText: "No one wine will suit every pasta dish. Pasta in a…tion if you ask again with a specific pasta dish.", productMatches: Array(0)}__proto__: Object
+RecipeDetModal.js:577 Chawan Mushi with Shrimp and Spring Peas
+RecipeDetModal.js:578 {vegetarian: false, vegan: false, glutenFree: true, dairyFree: true, veryHealthy: false, …}aggregateLikes: 0analyzedInstructions: Array(1)0: name: ""steps: Array(9)0: {number: 1, step: "Combine dashi powder, 1 tablespoon mirin, and2 cup…m water in a medium bowl. Stirto dissolve powder.", ingredients: Array(1), equipment: Array(1)}1: {number: 2, step: "Transfer 1 tablespoon dashimixture to a small bowl.", ingredients: Array(0), equipment: Array(1)}2: {number: 3, step: "Add soy sauce, oil,and remaining 2 teaspoons mirin…de. Set remaining dashi mixture asidefor custard.", ingredients: Array(1), equipment: Array(0)}3: {number: 4, step: "Set a large bamboo steamer over a largepot filled …dmushrooms are softened, about 2 minutesfor each.", ingredients: Array(3), equipment: Array(1), length: {…}}4: {number: 5, step: "Gently mix eggs in a large bowl to blend(do not cr…bles); stir in dashi mixturereserved for custard.", ingredients: Array(1), equipment: Array(1)}5: {number: 6, step: "Pour custard througha fine-mesh sieve into a large bowl or a 4-cupmeasuring cup.", ingredients: Array(0), equipment: Array(2)}6: {number: 7, step: "Toss peas, mushrooms, and scallions ina medium bow…evenly. Tightly cover each bowlwith plastic wrap.", ingredients: Array(2), equipment: Array(3)}7: {number: 8, step: "Place bowls in steamer, cover, andcook until custa…ill jigglesslightly in the center, 10-15 minutes.", ingredients: Array(0), equipment: Array(1), length: {…}}8: {number: 9, step: "Top custards with reserved dashi sauce,pea mixture, and shrimp.", ingredients: Array(1), equipment: Array(0)}length: 9__proto__: Array(0)__proto__: Objectlength: 1__proto__: Array(0)cheap: falsecreditText: "Epicurious"creditsText: "Epicurious"cuisines: []dairyFree: truediets: (3) ["gluten free", "dairy free", "pescatarian"]dishTypes: ["side dish"]extendedIngredients: (9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]gaps: "no"glutenFree: truehealthScore: 2id: 154581image: "https://spoonacular.com/recipeImages/154581-556x370.jpg"imageType: "jpg"instructions: "Preparation                                                        Combine dashi powder, 1 tablespoon mirin, and2 cups warm water in a medium bowl. Stirto dissolve powder. Transfer 1 tablespoon dashimixture to a small bowl. Add soy sauce, oil,and remaining 2 teaspoons mirin; set dashi sauceaside. Set remaining dashi mixture asidefor custard.                                                                Set a large bamboo steamer over a largepot filled with 1" of simmering water. Ifusing fresh peas, place in a small wide bowland set bowl in steamer. Cover and cookuntil peas are tender, about 5 minutes(if using frozen peas, do not cook). Repeatwith shrimp and mushrooms, placing eachin separate small wide bowls, and cook insteamer until shrimp are just opaque andmushrooms are softened, about 2 minutesfor each.                                                                Gently mix eggs in a large bowl to blend(do not create bubbles); stir in dashi mixturereserved for custard. Pour custard througha fine-mesh sieve into a large bowl or a 4-cupmeasuring cup.                                                                Toss peas, mushrooms, and scallions ina medium bowl and combine. Divide allbut 2 tablespoons pea mixture among 6 smallheatproof bowls or 8-ounce ramekins (setremaining pea mixture aside for serving);pour dashi custard over pea mixture,dividing evenly. Tightly cover each bowlwith plastic wrap.                                                                Place bowls in steamer, cover, andcook until custard is just set but still jigglesslightly in the center, 10-15 minutes.                                                                Top custards with reserved dashi sauce,pea mixture, and shrimp."ketogenic: falselowFodmap: falseoccasions: (2) ["spring", "easter"]pricePerServing: 92.01readyInMinutes: 45servings: 6sourceName: "Epicurious"sourceUrl: "http://www.epicurious.com/recipes/food/views/Chawan-Mushi-with-Shrimp-and-Spring-Peas-51155250"spoonacularScore: 16spoonacularSourceUrl: "https://spoonacular.com/chawan-mushi-with-shrimp-and-spring-peas-154581"sustainable: falsetitle: "Chawan Mushi with Shrimp and Spring Peas"vegan: falsevegetarian: falseveryHealthy: falseveryPopular: falseweightWatcherSmartPoints: 1whole30: falsewinePairing: {}__proto__: Object
+RecipeDetModal.js:577 Mediterranean Halibut with Mushroom Rice Pilaf
+RecipeDetModal.js:578 {vegetarian: false, vegan: false, glutenFree: true, dairyFree: true, veryHealthy: true, …}aggregateLikes: 3analyzedInstructions: Array(1)0: name: ""steps: (6) [{…}, {…}, {…}, {…}, {…}, {…}]__proto__: Objectlength: 1__proto__: Array(0)cheap: falsecookingMinutes: 0creditText: "Kraft Recipes"creditsText: "Kraft Recipes"cuisines: []dairyFree: truediets: (3) ["gluten free", "dairy free", "pescatarian"]dishTypes: (4) ["lunch", "main course", "main dish", "dinner"]extendedIngredients: (6) [{…}, {…}, {…}, {…}, {…}, {…}]gaps: "no"glutenFree: truehealthScore: 100id: 3454image: "https://spoonacular.com/recipeImages/3454-556x370.jpg"imageType: "jpg"instructions: "Heat oven to 450F.                                            Drizzle 2 Tbsp. dressing over fish in shallow baking dish.                                              Bake 15 min. or until fish flakes easily with fork.  Meanwhile, cook mushrooms in remaining dressing in medium skillet 3 to 4 min. or until mushrooms are tender, stirring occasionally.  Add water; bring to boil.  Stir in rice and peas; cover.  Simmer 5 min.  Remove from heat; let stand 5 min.                                              Spoon rice mixture onto serving plates; top with fish."ketogenic: falselowFodmap: falseoccasions: []preparationMinutes: 25pricePerServing: 465.79readyInMinutes: 25servings: 4sourceName: "Kraft Recipes"sourceUrl: "http://www.kraftrecipes.com/recipes/mediterranean-halibut-mushroom-rice-57681.aspx"spoonacularScore: 95spoonacularSourceUrl: "https://spoonacular.com/mediterranean-halibut-with-mushroom-rice-pilaf-3454"sustainable: falsetitle: "Mediterranean Halibut with Mushroom Rice Pilaf"vegan: falsevegetarian: falseveryHealthy: trueveryPopular: falseweightWatcherSmartPoints: 8whole30: falsewinePairing: {pairedWines: Array(3), pairingText: "Halibut works really well with Pinot Grigio, Gruen…t of 5 stars and a bottle costs about 18 dollars.", productMatches: Array(1)}__proto__: Object
+RecipeDetModal.js:577 Shrimp-Fried Rice
+RecipeDetModal.js:578 {vegetarian: false, vegan: false, glutenFree: true, dairyFree: true, veryHealthy: false, …}aggregateLikes: 0analyzedInstructions: Array(1)0: name: ""steps: Array(4)0: {number: 1, step: "Heat oil in large nonstick skillet on medium-high heat.", ingredients: Array(1), equipment: Array(1)}1: {number: 2, step: "Add ham and vegetables; stir-fry 4 min.", ingredients: Array(1), equipment: Array(0), length: {…}}2: {number: 3, step: "Add shrimp; stir-fry 4 min. or until shrimp turn pink.", ingredients: Array(1), equipment: Array(0), length: {…}}3: {number: 4, step: "Add remaining ingredients; stir-fry 2 to 3 min. or…til egg is set and ham mixture is heated through.", ingredients: Array(2), equipment: Array(0), length: {…}}length: 4__proto__: Array(0)__proto__: Objectlength: 1__proto__: Array(0)cheap: falsecookingMinutes: 20creditsText: nullcuisines: []dairyFree: truediets: (2) ["gluten free", "dairy free"]dishTypes: (6) ["antipasti", "starter", "snack", "appetizer", "antipasto", "hor d'oeuvre"]extendedIngredients: (9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]gaps: "no"glutenFree: truehealthScore: 1id: 267572image: "https://spoonacular.com/recipeImages/267572-556x370.jpg"imageType: "jpg"instructions: "Heat oil in large nonstick skillet on medium-high heat.  Add ham and vegetables; stir-fry 4 min.                                            Add shrimp; stir-fry 4 min. or until shrimp turn pink.                                            Add remaining ingredients; stir-fry 2 to 3 min. or until egg is set and ham mixture is heated through."ketogenic: falselowFodmap: falseoccasions: []preparationMinutes: 20pricePerServing: 32.88readyInMinutes: 20servings: 20sourceName: nullsourceUrl: "http://www.KraftRecipes.com/recipes/shrimp-fried-rice-50614.aspx"spoonacularScore: 9spoonacularSourceUrl: "https://spoonacular.com/shrimp-fried-rice-267572"sustainable: falsetitle: "Shrimp-Fried Rice"vegan: falsevegetarian: falseveryHealthy: falseveryPopular: falseweightWatcherSmartPoints: 1whole30: falsewinePairing: {pairedWines: Array(3), pairingText: "Shrimp works really well with Pinot Grigio, Riesli…good match. It costs about 11 dollars per bottle.", productMatches: Array(1)}__proto__: Object

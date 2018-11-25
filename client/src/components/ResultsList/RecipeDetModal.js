@@ -541,36 +541,83 @@ export class RecipeDetModal extends Component {
 
     state = {
         loading: true,
-        recipeDetails: {}
+        recipeDetails: {},
+        recipeIngred: [],
+        recipeSteps: [],
+        recipeSrcURL: "",
+        readyInMinutes: 0,
+        preparationMinutes: 0,
+        cookingMinutes: 0,
+        foundRecipeSteps: false,
+        sourceURL: ""
     }
 
     componentDidMount() {
         // get recipe details
-        console.log("Loading the Data from the API for recipe details?")
         console.log(this.props.id)
 
         // get recipe details Simulater
-        console.log("simulated recipe details output")
+
+        console.log("simulated recipe details output from API")
         setTimeout(() => {
             let randomIndex = Math.floor(Math.random() * recipeDetList.length)
+            let recipeIngred = recipeDetList[randomIndex]['extendedIngredients']
+            let recipeInstr = recipeDetList[randomIndex]['analyzedInstructions']
+            let recipeSteps = []
+            let foundRecipeSteps = false
+            let { preparationMinutes, cookingMinutes, readyInMinutes, sourceURL } = recipeDetList[randomIndex]
+            if (recipeInstr.length > 0) {
+                recipeSteps = recipeDetList[randomIndex]['analyzedInstructions'][0]['steps']
+                foundRecipeSteps = true
+            }
+            console.log(recipeDetList[randomIndex]['title'])
+            console.log(recipeDetList[randomIndex])
             this.setState({
                 recipeDetails: recipeDetList[randomIndex],
+                recipeIngred,
+                recipeSteps,
+                foundRecipeSteps,
+                preparationMinutes,
+                cookingMinutes,
+                readyInMinutes,
+                sourceURL,
                 loading: false
             })
-          }, 500)
+        }, 500)
+
 
         // get receipt details real
         /*
+        console.log("real recipe details load from API")
         API.getRecipeDetails(this.props.id)
             .then(res => {
-                console.log("Loading the Data formthe API for recipe details?")
+                let recipeIngred = res.data['extendedIngredients']
+                let recipeInstr = res.data['analyzedInstructions']
+                let recipeSteps = []
+                let foundRecipeSteps = false
+                let { preparationMinutes, cookingMinutes, readyInMinutes, sourceURL } = res.data
+                if (recipeInstr.length > 0) {
+                    recipeSteps = res.data['analyzedInstructions'][0]['steps']
+                    foundRecipeSteps = true
+                }
+                console.log(res.data['title'])
                 console.log(res.data)
                 this.setState({
-                    recipeDetails: res.data
+                    recipeDetails: res.data,
+                    recipeIngred,
+                    recipeSteps,
+                    foundRecipeSteps,
+                    preparationMinutes,
+                    cookingMinutes,
+                    readyInMinutes,
+                    sourceURL,
+                    loading: false
                 })
             })
         */
     }
+
+
 
     render() {
         return (
@@ -586,8 +633,27 @@ export class RecipeDetModal extends Component {
                             <div className="modal-body modalRecipeDet-body">
                                 <img className="img-fluid modalRecipeImg" src={this.state.recipeDetails['image']} alt={this.props.title}></img>
                                 <hr></hr>
-                                <p>{this.state.recipeDetails['instructions']}</p>
-                                <h4> { this.state.loading ? "Loading Recipe Information..." : "" } </h4>
+                                <div className="row">
+                                    <div className="col col-xs-4">Ready Time </div>
+                                    <div className="col col-xs-4">Prep Time </div>
+                                    <div className="col col-xs-4">Cook Time </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col col-xs-4">{(this.state.readyInMinutes > 0) ? (this.state.readyInMinutes+"mins") : "N/A"} </div>
+                                    <div className="col col-xs-4">{(this.state.preparationMinutes > 0) ? (this.state.preparationMinutes+"mins") : "N/A"} </div>
+                                    <div className="col col-xs-4">{(this.state.cookingMinutes > 0) ? (this.state.cookingMinutes+"mins") : "N/A"} </div>
+                                </div>
+                                <hr></hr>
+                                <h4>Ingredients</h4>
+                                <ul>
+                                    {this.state.recipeIngred.map(ingred => <li key={ingred.id} >{ingred.original}</li>)}
+                                </ul>
+                                <hr></hr>
+                                <h4>Instructions</h4>
+                                <ol>
+                                    {this.state.foundRecipeSteps ? this.state.recipeSteps.map(step => <li key={step.number}>{step.step}</li>) : "See Source URL"}
+                                </ol>
+                                <h4> {this.state.loading ? "Loading Recipe Information..." : ""} </h4>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-danger">Save</button>
