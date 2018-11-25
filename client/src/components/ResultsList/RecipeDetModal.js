@@ -2,25 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API"
 import "./RecipeDetModal.css"
 
-/*
-// recipeID:   id
-// picture:  image
-// ingredients: 
-//  amount: extendedIngredient[X]['original']  
-    pic: extendedIngredient[X]['image] 
- *  analyzedInstructions[0]['steps'][x][number] + [step
-]
-// readyInMinute:  
-preparationMinutes
-cookingMinutes: 
-// dishTypes:  dishTypes
-// cusine
-// diets
-// winePairing[pairedWines]
-    URL Source: "http://cantstayoutofthekitchen.com/2014/09/27/moms-apple-pie/"
-I/
 
-*/
 let recipeDetList = []
 let recipeDet1 = {
     "vegetarian": true,
@@ -537,6 +519,8 @@ let recipeDet2 = {
 recipeDetList.push(recipeDet1)
 recipeDetList.push(recipeDet2)
 
+const spoonImageBase = "https://spoonacular.com/cdn/ingredients_100x100/"
+
 export class RecipeDetModal extends Component {
 
     state = {
@@ -549,7 +533,7 @@ export class RecipeDetModal extends Component {
         preparationMinutes: 0,
         cookingMinutes: 0,
         foundRecipeSteps: false,
-        sourceURL: ""
+        sourceUrl: ""
     }
 
     componentDidMount() {
@@ -557,7 +541,7 @@ export class RecipeDetModal extends Component {
         console.log(this.props.id)
 
         // get recipe details Simulater
-
+        /*
         console.log("simulated recipe details output from API")
         setTimeout(() => {
             let randomIndex = Math.floor(Math.random() * recipeDetList.length)
@@ -565,7 +549,7 @@ export class RecipeDetModal extends Component {
             let recipeInstr = recipeDetList[randomIndex]['analyzedInstructions']
             let recipeSteps = []
             let foundRecipeSteps = false
-            let { preparationMinutes, cookingMinutes, readyInMinutes, sourceURL } = recipeDetList[randomIndex]
+            let { preparationMinutes, cookingMinutes, readyInMinutes, sourceUrl } = recipeDetList[randomIndex]
             if (recipeInstr.length > 0) {
                 recipeSteps = recipeDetList[randomIndex]['analyzedInstructions'][0]['steps']
                 foundRecipeSteps = true
@@ -580,14 +564,14 @@ export class RecipeDetModal extends Component {
                 preparationMinutes,
                 cookingMinutes,
                 readyInMinutes,
-                sourceURL,
+                sourceUrl,
                 loading: false
             })
         }, 500)
 
-
+        */
         // get receipt details real
-        /*
+        
         console.log("real recipe details load from API")
         API.getRecipeDetails(this.props.id)
             .then(res => {
@@ -595,7 +579,7 @@ export class RecipeDetModal extends Component {
                 let recipeInstr = res.data['analyzedInstructions']
                 let recipeSteps = []
                 let foundRecipeSteps = false
-                let { preparationMinutes, cookingMinutes, readyInMinutes, sourceURL } = res.data
+                let { preparationMinutes, cookingMinutes, readyInMinutes, sourceUrl } = res.data
                 if (recipeInstr.length > 0) {
                     recipeSteps = res.data['analyzedInstructions'][0]['steps']
                     foundRecipeSteps = true
@@ -610,11 +594,11 @@ export class RecipeDetModal extends Component {
                     preparationMinutes,
                     cookingMinutes,
                     readyInMinutes,
-                    sourceURL,
+                    sourceUrl,
                     loading: false
                 })
             })
-        */
+        
     }
 
 
@@ -633,6 +617,8 @@ export class RecipeDetModal extends Component {
                             <div className="modal-body modalRecipeDet-body">
                                 <img className="img-fluid modalRecipeImg" src={this.state.recipeDetails['image']} alt={this.props.title}></img>
                                 <hr></hr>
+                                Source: <a href={this.state.sourceUrl} target="_blank">{this.state.sourceUrl}</a>
+                                <hr></hr>
                                 <div className="row">
                                     <div className="col col-xs-4">Ready Time </div>
                                     <div className="col col-xs-4">Prep Time </div>
@@ -646,7 +632,7 @@ export class RecipeDetModal extends Component {
                                 <hr></hr>
                                 <h4>Ingredients</h4>
                                 <ul>
-                                    {this.state.recipeIngred.map(ingred => <li key={ingred.id} >{ingred.original}</li>)}
+                                    {this.state.recipeIngred.map(ingred => <li key={ingred.id} ><img className="ingredPic" src={spoonImageBase + ingred.image} alt={ingred.name}></img>{ingred.original}</li>)}
                                 </ul>
                                 <hr></hr>
                                 <h4>Instructions</h4>
@@ -670,3 +656,22 @@ export class RecipeDetModal extends Component {
 
 }
 
+/*  
+// recipeID:   id
+// picture:  image
+// ingredients: 
+//  amount: extendedIngredient[X]['original']  
+    pic: extendedIngredient[X]['image] 
+ *  analyzedInstructions[0]['steps'][x][number] + [step
+]
+// readyInMinute:  
+preparationMinutes
+cookingMinutes: 
+// dishTypes:  dishTypes
+// cusine
+// diets
+// winePairing[pairedWines]
+    URL Source: "http://cantstayoutofthekitchen.com/2014/09/27/moms-apple-pie/"
+I/
+
+*/
