@@ -6,3 +6,7 @@
     height: 76vh;
     overflow-y: auto;
 }
+
+.ingredPic {
+    width: 50px;
+}

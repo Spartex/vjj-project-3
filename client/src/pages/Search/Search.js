@@ -100,94 +100,94 @@ let testRecipeList = [
 ]
 let testRecipeList2 = [
   {
-      "id": 504291,
-      "title": "Crockpot Honey Mustard Chicken",
-      "image": "https://spoonacular.com/recipeImages/504291-312x231.jpg",
-      "imageType": "jpg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 10682
+    "id": 504291,
+    "title": "Crockpot Honey Mustard Chicken",
+    "image": "https://spoonacular.com/recipeImages/504291-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 10682
   },
   {
-      "id": 309856,
-      "title": "Beer Can Chicken",
-      "image": "https://spoonacular.com/recipeImages/309856-312x231.jpeg",
-      "imageType": "jpeg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 97
+    "id": 309856,
+    "title": "Beer Can Chicken",
+    "image": "https://spoonacular.com/recipeImages/309856-312x231.jpeg",
+    "imageType": "jpeg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 97
   },
   {
-      "id": 992053,
-      "title": "Chinese Smoked Chicken (Instant Pot)",
-      "image": "https://spoonacular.com/recipeImages/992053-312x231.jpg",
-      "imageType": "jpg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 20
+    "id": 992053,
+    "title": "Chinese Smoked Chicken (Instant Pot)",
+    "image": "https://spoonacular.com/recipeImages/992053-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 20
   },
   {
-      "id": 983395,
-      "title": "Beer Can Chicken",
-      "image": "https://spoonacular.com/recipeImages/983395-312x231.jpeg",
-      "imageType": "jpeg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 10
+    "id": 983395,
+    "title": "Beer Can Chicken",
+    "image": "https://spoonacular.com/recipeImages/983395-312x231.jpeg",
+    "imageType": "jpeg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 10
   },
   {
-      "id": 287151,
-      "title": "Apple Cider Brined Chicken",
-      "image": "https://spoonacular.com/recipeImages/287151-312x231.jpeg",
-      "imageType": "jpeg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 4
+    "id": 287151,
+    "title": "Apple Cider Brined Chicken",
+    "image": "https://spoonacular.com/recipeImages/287151-312x231.jpeg",
+    "imageType": "jpeg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 4
   },
   {
-      "id": 148354,
-      "title": "Roasted Lime and Onion Chicken",
-      "image": "https://spoonacular.com/recipeImages/148354-312x231.jpg",
-      "imageType": "jpg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 1
+    "id": 148354,
+    "title": "Roasted Lime and Onion Chicken",
+    "image": "https://spoonacular.com/recipeImages/148354-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 1
   },
   {
-      "id": 30794,
-      "title": "Smoky Roasted Cauliflower",
-      "image": "https://spoonacular.com/recipeImages/30794-312x231.jpg",
-      "imageType": "jpg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 0
+    "id": 30794,
+    "title": "Smoky Roasted Cauliflower",
+    "image": "https://spoonacular.com/recipeImages/30794-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 0
   },
   {
-      "id": 282731,
-      "title": "How to Roast a Chicken",
-      "image": "https://spoonacular.com/recipeImages/282731-312x231.jpg",
-      "imageType": "jpg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 0
+    "id": 282731,
+    "title": "How to Roast a Chicken",
+    "image": "https://spoonacular.com/recipeImages/282731-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 0
   },
   {
-      "id": 186905,
-      "title": "Rich Turkey Gravy",
-      "image": "https://spoonacular.com/recipeImages/186905-312x231.jpg",
-      "imageType": "jpg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 0
+    "id": 186905,
+    "title": "Rich Turkey Gravy",
+    "image": "https://spoonacular.com/recipeImages/186905-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 0
   },
   {
-      "id": 543314,
-      "title": "Chicken in a Crock Pot",
-      "image": "https://spoonacular.com/recipeImages/543314-312x231.jpg",
-      "imageType": "jpg",
-      "usedIngredientCount": 1,
-      "missedIngredientCount": 2,
-      "likes": 0
+    "id": 543314,
+    "title": "Chicken in a Crock Pot",
+    "image": "https://spoonacular.com/recipeImages/543314-312x231.jpg",
+    "imageType": "jpg",
+    "usedIngredientCount": 1,
+    "missedIngredientCount": 2,
+    "likes": 0
   }
 ]
 
@@ -203,13 +203,35 @@ class Search extends Component {
     ingredAll: {},
     modalIsOpen: {},
     recipeList: [],
-    searching: false
+    searching: false,
+    loggedIn: false,
+    username: ""
   }
 
   componentDidMount() {
     // this is called to populate the state variables: ingredAll
     // and ingredGroup (list of types like meat, vegetable)
     this.getIngredients()
+
+    // check for Logged in User
+    API.checkForUser()
+      .then(res => {
+        console.log(res.data)
+        if (!res.data['user']) {
+          console.log("No user found!")
+          this.props.history.push({
+            pathname: '/login'
+          })
+        } else {
+          this.setState({
+            loggedIn: true,
+            username: res.data['user']['username']
+          })
+
+        }
+      })
+
+
   }
 
   getIngredients = () => {
@@ -304,17 +326,22 @@ class Search extends Component {
     this.setState({
       searching: true
     })
-    
-    // this simulates the search for testing purposes
-    let randomIndex = Math.floor(Math.random()*testRecipes.length) 
-    setTimeout ( () => { this.props.history.push({
-      pathname: '/result',
-      state: {recipeList: testRecipes[randomIndex] },
-    })}, 1000)
 
+    // this simulates the search for testing purposes
+    
+    console.log("Simulating Search Results from Pre-defined List")
+    let randomIndex = Math.floor(Math.random() * testRecipes.length)
+    setTimeout(() => {
+      this.props.history.push({
+        pathname: '/result',
+        state: { recipeList: testRecipes[randomIndex] },
+      })
+    }, 1000)
+    
 
     // this is the real search below
     /*
+    console.log("real search results")
     API.getRecipeList(ingredList)
       .then(res => {
         console.log("----->")
@@ -336,14 +363,14 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar history={this.props.history} />
         <div className="container">
 
-          <IngredGroupSect>
+          <IngredGroupSect prompt={this.state.username + ", pick you ingredient!"}>
             {this.state.ingredGroup.map(group => {
               return (
                 <IngredGroupCard
-                  key = {group.type}
+                  key={group.type}
                   type={group.type}
                   modalOpen={() => this.openModal(group.type)}
                   typeImgURL={group.typeImgURL}
@@ -356,7 +383,7 @@ class Search extends Component {
             {this.state.addIngred.map(item => (
               <IngredAdd
                 key={item}
-                deleteMe = {() => this.delIngredFromList(item)}
+                deleteMe={() => this.delIngredFromList(item)}
               >{item}</IngredAdd>
             ))}
           </IngredSelectedSect>
@@ -373,7 +400,7 @@ class Search extends Component {
                 {ingredList.map((ingred, index) => {
                   return (
                     <IngredCard
-                      key = {ingred['name']}
+                      key={ingred['name']}
                       ingredName={ingred['name']}
                       addToList={() => this.addIngredToList(ingred['name'], ingred['type'])}
                       ingredImgURL={ingred['nameImgURL']}
@@ -384,8 +411,8 @@ class Search extends Component {
             )
           })}
 
-            
-           <GetRecipeListBtn searching = {this.state.searching} action={this.getRecipeList}>Search for Recipes</GetRecipeListBtn>
+
+          <GetRecipeListBtn searching={this.state.searching} action={this.getRecipeList}>Search for Recipes</GetRecipeListBtn>
         </div>
 
       </div>
