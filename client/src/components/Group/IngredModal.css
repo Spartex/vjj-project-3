@@ -1,8 +1,12 @@
 /* Important part */
-.modal-dialog{
+.modalRecipeDet-dialog{
     overflow-y: initial !important
 }
-.modal-body{
+.modalRecipeDet-body{
     height: 76vh;
     overflow-y: auto;
+}
+
+.modalRecipeImg {
+    width: 100%
 }
