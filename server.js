@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require("express");
 const bodyParser = require("body-parser");
+
 const path = require("path");
 const morgan = require('morgan')
 
@@ -26,7 +27,6 @@ app.use(//added
   })
 )
 app.use(bodyParser.json());//added
-
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -62,6 +62,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+// Starting Server
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
