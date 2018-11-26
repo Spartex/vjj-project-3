@@ -1,0 +1,23 @@
+.recipeListColumns {
+    column-count: 1;
+}
+
+.recipeFoundList {
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 62em) {
+    .recipeListColumns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (min-width: 75em) {
+    .recipeListColumns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}

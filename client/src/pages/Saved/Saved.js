@@ -5,7 +5,8 @@ import API from "../../utils/API"
 class Saved extends Component {
   state = {
     username: "",
-    loggedIn: false
+    loggedIn: false,
+    savedRecipes: []
   }
 
   componentDidMount() {
@@ -22,16 +23,29 @@ class Saved extends Component {
             loggedIn: true,
             username: res.data['user']['username']
           })
-
+          API.getFavOfUser(res.data['user']['username'])
+            .then(res => { 
+              console.log("Favorites List:", res.data['savedRecipes'])
+              this.setState({
+                savedRecipes: res.data['savedRecipes']
+              })
+            })
         }
       })
   }
+
+
 
   render() {
     return (
       <div>
         <NavBar history={this.props.history} />
-        <h1>I am on Saved Page with {this.state.username}</h1>
+        <h4>I am on Saved Page with {this.state.username}</h4>
+        <ul>
+          {this.state.savedRecipes.map( recipe => {
+            return <li key={recipe}>{recipe}</li>
+          })}
+        </ul>
       </div>
     
     )
