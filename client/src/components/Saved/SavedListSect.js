@@ -1,5 +1,5 @@
 import React from "react";
-import "./RecipeListSect.css"
+import "./SavedListSect.css"
 
 export const RecipeListSect = props => {
   return (

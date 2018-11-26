@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const db = require("../../models");
 
-// get all saved recipes
+// get all saved recipes for user
 router.get("/user/:username", (req, res) => {
   console.log("API call to get all saved recipes by ", req.params.username)
   db.User.find({ username: req.params.username })

@@ -59,6 +59,13 @@ export default {
     let url="/api/saved/user/"+username
     return axios.get(url)
   },
+
+  // get saved recipe
+  getSavedRecipe: function (spoonID) {
+    let url="/api/saved/recipe/"+spoonID
+    return axios.get(url)
+  },
+
   // add recipe ID to user favorites
   addFavToUser: function(username, spoonID) {
     let url = "/api/saved/user/add/"+username
