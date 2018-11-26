@@ -541,7 +541,7 @@ export class RecipeDetModal extends Component {
         console.log(this.props.id)
 
         // get recipe details Simulater
-        /*
+        
         console.log("simulated recipe details output from API")
         setTimeout(() => {
             let randomIndex = Math.floor(Math.random() * recipeDetList.length)
@@ -569,9 +569,9 @@ export class RecipeDetModal extends Component {
             })
         }, 500)
 
-        */
-        // get receipt details real
         
+        // get receipt details real
+        /*
         console.log("real recipe details load from API")
         API.getRecipeDetails(this.props.id)
             .then(res => {
@@ -598,7 +598,7 @@ export class RecipeDetModal extends Component {
                     loading: false
                 })
             })
-        
+        */
     }
 
 
