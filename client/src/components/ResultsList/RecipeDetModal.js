@@ -566,11 +566,11 @@ export class RecipeDetModal extends Component {
                 sourceUrl,
                 disabled: false
             })
-        }, 500)
+        }, 500) 
 
         
         //this is the real API search below
-/*      console.log("real recipe details load from API")
+/*        console.log("real recipe details load from API")
         API.getRecipeDetails(this.props.id)
             .then(res => {
                 let recipeIngred = res.data['extendedIngredients']

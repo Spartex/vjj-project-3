@@ -335,7 +335,7 @@ class Search extends Component {
         pathname: '/result',
         state: { recipeList: testRecipes[randomIndex] },
       })
-    }, 1000)
+    }, 1000) 
     
 
 
