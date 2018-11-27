@@ -634,7 +634,7 @@ export class RecipeDetModal extends Component {
                             <div className="modal-body modalRecipeDet-body">
                                 <img className="img-fluid modalRecipeImg" src={this.state.recipeDetails['image']} alt={this.props.title}></img>
                                 <hr></hr>
-                                Source: <a href={this.state.sourceUrl} target="_blank">{this.state.sourceUrl}</a>
+                                Recipe Src: <a href={this.state.sourceUrl} target="_blank">{this.state.sourceUrl}</a>
                                 <hr></hr>
                                 <div className="row">
                                     <div className="col col-xs-4">Ready Time </div>

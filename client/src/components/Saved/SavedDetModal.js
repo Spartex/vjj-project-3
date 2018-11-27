@@ -3,6 +3,27 @@ import "./SavedDetModal.css"
 
 const spoonImageBase = "https://spoonacular.com/cdn/ingredients_100x100/"
 
+const CardFooterNormal = props => {
+    return (
+        <div className="modal-footer">
+            <a href={props.shareableURL} target="_blank"><button type="button" className="btn btn-success">Shareable Link</button></a>
+            <button type="button" className="btn btn-danger" onClick={props.confirm}>Delete</button>
+            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={props.closeModal}>Close</button>
+        </div>
+    )
+}
+
+const CardFooterDelete = props => {
+    return (
+        <div className="modal-footer">
+            <p>Sure about Deleting?</p>
+            <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={props.confirm}>CANCEL</button>
+            <button type="button" className="btn btn-success" onClick={props.removeSaved}>OK</button>
+        </div>
+    )
+}
+
+
 export class SavedDetModal extends Component {
 
     state = {
@@ -15,7 +36,8 @@ export class SavedDetModal extends Component {
         preparationMinutes: 0,
         cookingMinutes: 0,
         foundRecipeSteps: false,
-        sourceUrl: ""
+        sourceUrl: "",
+        deleteFooter: false
     }
 
     componentDidMount() {
@@ -45,6 +67,11 @@ export class SavedDetModal extends Component {
         })
     }
 
+    confirmDelete = (trueOrFalse) => {
+        this.setState({
+            deleteFooter: trueOrFalse
+        })
+    }
 
 
     render() {
@@ -61,7 +88,7 @@ export class SavedDetModal extends Component {
                             <div className="modal-body modalRecipeDet-body">
                                 <img className="img-fluid modalRecipeImg" src={this.state.recipeDetails['image']} alt={this.props.title}></img>
                                 <hr></hr>
-                                Source: <a href={this.state.sourceUrl} target="_blank">{this.state.sourceUrl}</a>
+                                Recipe Src: <a href={this.state.sourceUrl} target="_blank">{this.state.sourceUrl}</a>
                                 <hr></hr>
                                 <div className="row">
                                     <div className="col col-xs-4">Ready Time </div>
@@ -83,13 +110,10 @@ export class SavedDetModal extends Component {
                                 <ol>
                                     {this.state.foundRecipeSteps ? this.state.recipeSteps.map(step => <li key={step.number}>{step.step}</li>) : "See Source URL"}
                                 </ol>
-                                <h4> {this.state.loading ? "Loading Recipe Information..." : ""} </h4>
                             </div>
-                            <div className="modal-footer">
-                                <a href={this.props.shareableURL} target="_blank"><button type="button" className="btn btn-success">Shareable Link</button></a>
-                                <button type="button" className="btn btn-danger" onClick={this.props.removeSaved}>Delete</button>
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={this.props.closeModal}>Close</button>
-                            </div>
+                            {this.state.deleteFooter
+                                ? <CardFooterDelete confirm={()=>{this.confirmDelete(false)}} {...this.props} />
+                                : <CardFooterNormal confirm={()=>{this.confirmDelete(true)}} {...this.props} />}
                         </div>
                     </div>
                 </div>

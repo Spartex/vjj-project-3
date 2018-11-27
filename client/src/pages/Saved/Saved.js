@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar"
 import API from "../../utils/API"
 import { SavedBrief, SavedListSect, SavedSearch, SavedDetModal } from "../../components/Saved"
 
-class Saved extends Component {
+export class Saved extends Component {
   state = {
     username: "",
     loggedIn: false,
@@ -94,6 +94,7 @@ class Saved extends Component {
     })
   }
 
+  // remove saved recipe from user's shared
   removeSaved = (recipeID) => {
     console.log("will remove", recipeID, "from user", this.state.username)
     API.removeFavFromUser(this.state.username, recipeID)
@@ -101,7 +102,7 @@ class Saved extends Component {
         this.closeModal(recipeID)
         console.log("successfull removed ", res.data)
         console.log("Before", this.state.savedRecipesDetail)
-        let savedRecipesDetail = this.state.savedRecipesDetail.filter(recipe => recipe.spoonID != recipeID)
+        let savedRecipesDetail = this.state.savedRecipesDetail.filter(recipe => recipe.spoonID !== recipeID)
         console.log("After", savedRecipesDetail)
         this.setState({
           savedRecipesDetail
@@ -109,7 +110,7 @@ class Saved extends Component {
       })
   }
 
-
+  // update the display based on the filter
   updateDisplayRecipe = (searchText) => {
     let savedRecipesDetail = this.state.savedRecipesDetail
     let displayRecipe = {}
@@ -131,9 +132,8 @@ class Saved extends Component {
   }
 
 
-  // display the text and use this for searching
+  // display the text on the search box and call the update display to filter recipe
   handleChange = (event) => {
-
     this.setState({
       [event.target.name]: event.target.value,
     }, () => {
@@ -183,4 +183,3 @@ class Saved extends Component {
   }
 }
 
-export default Saved;
