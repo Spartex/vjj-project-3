@@ -68,7 +68,6 @@ export class RegisterForm extends Component {
         console.log(res.data)
         let result = res.data
         let msg = ""
-        let redirectURL = "/search"
         if ('error' in result) {
           msg = result['error']
         } else {

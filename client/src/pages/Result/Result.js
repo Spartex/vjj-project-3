@@ -527,16 +527,36 @@ class Result extends Component {
     state = {
         recipeList: [],
         modalIsOpen: {},
+        username: ""
     }
 
     componentDidMount() {
-        console.log(this.props)
-        // initialize all Modals To be Closed
-        let modalIsOpen = this.state.modalIsOpen
-        this.props.location.state.recipeList.map(
-            recipe => { modalIsOpen[recipe.id] = false }
-        )
-        this.setState({modalIsOpen})
+        // check for Logged in User
+        API.checkForUser()
+            .then(res => {
+                console.log(res.data)
+                if (!res.data['user']) {
+                    console.log("No user found!")
+                    this.props.history.push({
+                        pathname: '/login'
+                    })
+                } else {
+                    // initialize all Modals To be Closed
+                    let modalIsOpen = this.state.modalIsOpen
+                    this.props.location.state.recipeList.map(
+                        recipe => { modalIsOpen[recipe.id] = false }
+                    )
+                    this.setState({
+                        loggedIn: true,
+                        username: res.data['user']['username'],
+                        modalIsOpen
+                    })
+
+                }
+            })
+
+
+        // this.setState({ modalIsOpen })
     }
 
     openModal = (recipeID) => {
@@ -548,7 +568,6 @@ class Result extends Component {
         })
     }
 
-
     closeModal = (recipeID) => {
         let modalIsOpenCopy = this.state.modalIsOpen
         modalIsOpenCopy[recipeID] = false
@@ -556,17 +575,6 @@ class Result extends Component {
         this.setState({
             modalIsOpen: modalIsOpenCopy
         })
-    }
-
-    getRecipeDetails = (recipeID) => {
-        console.log("getting Details: ", recipeID)
-        this.openModal(recipeID)
-        /*
-        API.getRecipeDetails(recipeID)
-          .then(res => res.data)
-        */
-        // open modal with propreties 
-        // dispaly 
     }
 
     render() {
@@ -578,20 +586,21 @@ class Result extends Component {
                         {this.props.location.state.recipeList.map(recipe => {
                             return (
                                 <div key={recipe.id}>
-                                <RecipeBrief
-                                    title={recipe.title}
-                                    image={recipe.image}
-                                    id={recipe.id}
-                                    likes={recipe.likes}
-                                    openModal={() => this.openModal(recipe.id)}
-                                />
-                                <RecipeDetModal
-                                    title={recipe.title}
-                                    image={recipe.image}
-                                    id={recipe.id}
-                                    modalIsOpen = {this.state.modalIsOpen[recipe.id]}
-                                    closeModal = {() => this.closeModal(recipe.id)}
-                                />
+                                    <RecipeBrief
+                                        title={recipe.title}
+                                        image={recipe.image}
+                                        id={recipe.id}
+                                        likes={recipe.likes}
+                                        openModal={() => this.openModal(recipe.id)}
+                                    />
+                                    <RecipeDetModal
+                                        username = {this.state.username}
+                                        title={recipe.title}
+                                        image={recipe.image}
+                                        id={recipe.id}
+                                        modalIsOpen={this.state.modalIsOpen[recipe.id]}
+                                        closeModal={() => this.closeModal(recipe.id)}
+                                    />
                                 </div>
                             )
                         })}

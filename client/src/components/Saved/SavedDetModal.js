@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API"
-import "./RecipeDetModal.css"
+import "./SavedDetModal.css"
 
 
 let recipeDetList = []
@@ -524,7 +524,7 @@ const spoonImageBase = "https://spoonacular.com/cdn/ingredients_100x100/"
 export class RecipeDetModal extends Component {
 
     state = {
-        disabled: false,
+        loading: true,
         recipeDetails: {},
         recipeIngred: [],
         recipeSteps: [],
@@ -565,7 +565,7 @@ export class RecipeDetModal extends Component {
                 cookingMinutes,
                 readyInMinutes,
                 sourceUrl,
-                disabled: false
+                loading: false
             })
         }, 500)
 
@@ -601,23 +601,6 @@ export class RecipeDetModal extends Component {
         */
     }
 
-    saveRecipe = () => {
-        console.log("Saving Recipe for", this.props.username)
-        let recipeDetailsJSON = JSON.stringify(this.state.recipeDetails)
-        let spoonID = this.state.recipeDetails['id']
-        let { sourceUrl, title, image, readyInMinutes , preparationMinutes, cookingMinutes} = this.state.recipeDetails
-        let newObject = {
-            spoonID, sourceUrl, title, image, readyInMinutes , preparationMinutes, cookingMinutes, recipeDetailsJSON
-        }
-        // Add to Main Database
-        API.addFavToDB(newObject)
-            .then(() => {
-                this.setState({disabled: true})
-                API.addFavToUser(this.props.username, spoonID)
-                    .then(res => console.log(res.data))
-            })
-        console.log(newObject)
-    }
 
 
     render() {
@@ -656,9 +639,10 @@ export class RecipeDetModal extends Component {
                                 <ol>
                                     {this.state.foundRecipeSteps ? this.state.recipeSteps.map(step => <li key={step.number}>{step.step}</li>) : "See Source URL"}
                                 </ol>
+                                <h4> {this.state.loading ? "Loading Recipe Information..." : ""} </h4>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-danger" disabled={this.state.disabled} onClick={this.saveRecipe}>Save</button>
+                                <button type="button" className="btn btn-danger">Save</button>
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={this.props.closeModal}>Close</button>
                             </div>
                         </div>

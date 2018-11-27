@@ -1,0 +1,12 @@
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 76vh;
+    overflow-y: auto;
+}
+
+.ingredPic {
+    width: 50px;
+}
