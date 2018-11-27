@@ -20,6 +20,26 @@
     * yarn start
 
 
+## steps to use the placeholder simulated API
+1.  Modify the ./client/src/pages/Search/Search.js
+    * make sure the 8 lines below the text "//this simulates the search for testing purposes" IS NOT commented out.  (lines 331-338) 
+    * make sure the 16 lines below the text "//this is the real API search below" IS commented out.  (lines 343-358)   
+
+1.  Modify the ./client/src/components/ResultsList/RecipeDetModal.js
+    * make sure the 26 lines below the text "//this simulates the search for testing purposes" IS NOT commented out.  (lines 543-569) 
+    * make sure the 16 lines below the text "//this is the real API search below" IS commented out.  (lines 573-598) 
+
+
+## steps to use the real API
+1.  Modify the ./client/src/pages/Search/Search.js
+    * make sure the 8 lines below the text "//this simulates the search for testing purposes" IS commented out.  (lines 331-338) 
+    * make sure the 16 lines below the text "//this is the real API search below" IS NOT commented out.  (lines 343-358)   
+
+1.  Modify the ./client/src/components/ResultsList/RecipeDetModal.js
+    * make sure the 26 lines below the text "//this simulates the search for testing purposes" IS commented out.  (lines 543-569) 
+    * make sure the 16 lines below the text "//this is the real API search below" IS NOT commented out.  (lines 573-598) 
+
+
 # Create React Express App
 
 ## About This Boilerplate

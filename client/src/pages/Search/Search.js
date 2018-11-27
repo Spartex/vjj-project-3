@@ -328,7 +328,6 @@ class Search extends Component {
     })
 
     // this simulates the search for testing purposes
-    
     console.log("Simulating Search Results from Pre-defined List")
     let randomIndex = Math.floor(Math.random() * testRecipes.length)
     setTimeout(() => {
@@ -339,9 +338,9 @@ class Search extends Component {
     }, 1000)
     
 
-    // this is the real search below
-    /*
-    console.log("real search results")
+
+    // this is the real API search below
+/*  console.log("real search results")
     API.getRecipeList(ingredList)
       .then(res => {
         console.log("----->")
@@ -356,9 +355,10 @@ class Search extends Component {
             state: {recipeList: res.data}
           })
         } )
-      })
-    */
+      })  */
+    
   }
+
 
   render() {
     return (
