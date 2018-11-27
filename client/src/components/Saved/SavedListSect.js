@@ -1,11 +1,11 @@
 import React from "react";
 import "./SavedListSect.css"
 
-export const RecipeListSect = props => {
+export const SavedListSect = props => {
   return (
-    <div className="card recipeFoundList">
-      <div className="card-header"> Receipes Found</div>
-      <div className="card-body recipeListColumns">
+    <div className="card savedList">
+      <div className="card-header">{props.banner}</div>
+      <div className="card-body savedListColumns">
         {props.children}
       </div>
     </div>
