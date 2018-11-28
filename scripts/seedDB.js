@@ -13,7 +13,7 @@ mongoose.connect(
 
 const ingredientSeed = [
   {
-    name: "Brocoli",
+    name: "Broccoli",
     type: "vegetable",
     owner: "system",
     nameImgURL: "./assets/images/testimage.jpg",
