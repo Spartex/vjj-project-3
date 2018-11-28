@@ -1,12 +1,21 @@
 /* Important part */
-.modalRecipeDet-dialog{
+.modal-dialog{
     overflow-y: initial !important
 }
-.modalRecipeDet-body{
+.modal-body{
     height: 76vh;
     overflow-y: auto;
 }
 
-.modalRecipeImg {
-    width: 100%
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    width: 100%;
+    height:auto;
+}
+
+.modal-header .close {
+    padding: 1rem;
+    margin: -1rem -1rem -1rem auto;
+    color: red !important;
 }

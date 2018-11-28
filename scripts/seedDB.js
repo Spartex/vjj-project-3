@@ -111,7 +111,7 @@ const ingredientSeed = [
     typeImgURL: "https://via.placeholder.com/150"
   },
   {
-    name: "egg",
+    name: "John Egg",
     type: "egg",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
@@ -124,6 +124,23 @@ const ingredientSeed = [
     nameImgURL: "https://via.placeholder.com/150",
     typeImgURL: "https://via.placeholder.com/150"
   },
+
+  {
+    name: "Chocolate Sauce",
+    type: "Junk Food",
+    owner: "system",
+    nameImgURL: "https://via.placeholder.com/150",
+    typeImgURL: "https://via.placeholder.com/150"
+  },
+
+  {
+    name: "Ice Cream",
+    type: "Junk Food",
+    owner: "system",
+    nameImgURL: "https://via.placeholder.com/150",
+    typeImgURL: "https://via.placeholder.com/150"
+  },
+
   {
     name: "Lobster",
     type: "seafood",

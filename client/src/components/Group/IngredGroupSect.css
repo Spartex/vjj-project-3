@@ -1,9 +1,181 @@
+.body{
+
+    height:auto!important;
+    min-height:100vh;
+}
+
+.container {
+    overflow:hidden;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background-size: contain;
+    height:auto!important;
+    min-height:100vh;
+}
+
 .card-columns {
     column-count: 3;
 }
 
 .foodGroupSect {
     margin-top: 1.5rem;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    text-align: center;
+    font-size: 21px;
+    background-color: black;
+    color: #fff;
+}
+
+.h4, h4 {
+    display:inline;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #fff;
+  
+}
+
+.card {
+    text-align: center;
+  }
+  
+  @media (max-width: 990px) {
+    .resizeimg {
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .resizeimg {
+      width: auto;
+      height: 350px;
+    }
+  }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) {
+
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }  .card-img-overlay{
+        width: 100%;
+        height: auto;
+        
+    }
+    
+    .card-img-overlay .left {
+        float:left;
+        width :50%;
+    }
+    .card-img-overlay .right {
+        float:left;
+        width :50%;
+    } 
+    .card-columns {
+        column-count: 3;
+    }  .card-img-overlay{
+        width: 100%;
+        height: auto;
+        
+    }
+    
+    .card-img-overlay .left {
+        float:left;
+        width :50%;
+    }
+    .card-img-overlay .right {
+        float:left;
+        width :50%;
+    } 
+    .card-columns {
+        column-count: 3;
+    }
+    
+    .foodGroupSect {
+        margin-top: 1.5rem;
+    }
+    
+    .card-header {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0,0,0,.03);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        text-align: center;
+        font-size: 21px;
+        background-color: black;
+        color: #fff;
+    }
+    
+    .h4, h4 {
+        font-size: 16px;
+        overflow-wrap: break-word;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #fff;}
+
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+    
+    .card-img-overlay{
+        width: 100%;
+        height: auto;
+    
+    }
+    
+    .card-img-overlay .left {
+        float:left;
+        width :50%;
+    }
+    .card-img-overlay .right {
+        float:left;
+        width :50%;
+    } 
+    .card-columns {
+        column-count: 3;
+    }
+    
+    .foodGroupSect {
+        margin-top: 1.5rem;
+    }
+    
+    .card-header {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0,0,0,.03);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        text-align: center;
+        font-size: 21px;
+        background-color: black;
+        color: #fff;
+    }
+    
+    .h4, h4 {
+        font-size: 16px;
+        overflow-wrap: break-word;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #fff;}
 }
 
 @media (min-width: 48em) {
