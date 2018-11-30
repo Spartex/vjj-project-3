@@ -622,11 +622,11 @@ export class RecipeDetModal extends Component {
         return (
             <div>
                 <div className={this.props.modalIsOpen ? "modal fade show" : "modal fade"} style={this.props.modalIsOpen ? { display: "block" } : { display: "none" }} id="myModal">
-                    <div className="modal-dialog modal-lg modalRecipeDet-dialog">
+                    <div className="modal-dialog modal-lg modalRecipeDet-dialog lsmod">
                         <div className="modal-content">
 
-                            <div className="modal-header">
-                                <a href={this.state.recipeDetails['sourceUrl']} target="_blank"><h4 className="modal-title">{this.props.title}</h4></a>
+                            <div className="modal-header lsmodheader">
+                                <a className="lsmodheader" href={this.state.recipeDetails['sourceUrl']} target="_blank"><h4 className="modal-title lsmodheader">{this.props.title}</h4></a>
                                 <button type="button" className="close" data-dismiss="modal" onClick={this.props.closeModal}>&times;</button>
                             </div>
                             <div className="modal-body modalRecipeDet-body">

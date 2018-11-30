@@ -58,7 +58,7 @@ export class SavedShare extends Component {
 
   render() {
     return (
-      <div className="shareContainer" >
+      <div className="shareContainer savedShareCont" >
         <div className="card recipeShareCard">
           <div className="card-header text-center"><a href={this.state.sourceUrl}><h4>{this.state.title}</h4></a></div>
           <div className="card-body">

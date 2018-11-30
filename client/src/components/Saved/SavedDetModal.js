@@ -85,7 +85,7 @@ export class SavedDetModal extends Component {
                                 <a href={this.state.recipeDetails['sourceUrl']} target="_blank"><h4 className="modal-title">{this.props.title}</h4></a>
                                 <button type="button" className="close" data-dismiss="modal" onClick={this.props.closeModal}>&times;</button>
                             </div>
-                            <div className="modal-body modalRecipeDet-body">
+                            <div className="modal-body modalRecipeDet-body ">
                                 <img className="img-fluid modalRecipeImg" src={this.state.recipeDetails['image']} alt={this.props.title}></img>
                                 <hr></hr>
                                 Recipe Src: <a href={this.state.sourceUrl} target="_blank">{this.state.sourceUrl}</a>

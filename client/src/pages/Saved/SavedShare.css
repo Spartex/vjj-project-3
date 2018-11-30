@@ -12,6 +12,7 @@
     max-width: 800px;
     width: 100%;
     margin: 10px;
+    text-align: left !important;
 }
 
 .shareContainer {
