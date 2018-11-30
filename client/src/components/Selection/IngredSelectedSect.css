@@ -1,3 +1,10 @@
 .selectedIngred {
     margin-top: 1.5rem;
 }
+
+.float-right {
+    float: right!important;
+    color: red;
+    box-shadow: 1px 1px 1px #b3b3b366;
+}
+
