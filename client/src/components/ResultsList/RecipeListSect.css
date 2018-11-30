@@ -6,6 +6,16 @@
     margin-top: 1.5rem;
 }
 
+.lsmod {
+    text-align: left;
+}
+
+.lsmodheader {
+    text-align: center !important;
+    font-size: 18px;
+    display: block;
+}
+
 @media (min-width: 62em) {
     .recipeListColumns {
         -webkit-column-count: 3;

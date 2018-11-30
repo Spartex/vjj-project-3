@@ -11,5 +11,7 @@
 
 .searchbtn {
     text-align: center;
-    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+    font-weight: bold;
+    background-image: linear-gradient(to right, #009245, rgb(235, 221, 34));
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
 }
