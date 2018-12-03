@@ -1,4 +1,8 @@
-## steps to start the Recipe App
+## pre-prod build on Heroku
+https://vjjrecipesearch.herokuapp.com/
+
+
+## steps to start the Recipe App 
 1.  Startup MongoDB 
      * mongod
 
@@ -18,6 +22,10 @@
 
 1.  start the files 
     * yarn start
+
+
+## if installed on Heroku Dev, type the following command to run the seed script
+1.  heroku run node "./scripts/seedDB.js"
 
 
 ## steps to use the placeholder simulated API
