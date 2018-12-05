@@ -11,7 +11,6 @@ class Register extends Component {
   render() {
     return (
       <div className="container">
-      <p>Register page!</p>
       <RegisterForm />
       </div>
     )

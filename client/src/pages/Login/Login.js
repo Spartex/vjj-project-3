@@ -13,7 +13,6 @@ class Login extends Component {
   render() {
     return (
       <div className="container">
-      <p>Login page!</p>
       <LoginForm {...this.props} />
       </div>
     )
