@@ -99,7 +99,7 @@ export class LoginForm extends Component {
           </div>
           
         </div>
-        <div><h4><a href="/register">Register Here</a></h4></div>
+        <span><a href="/register"><button className="btn registerbtn">Register Here</button></a></span>
       </div>
     )
   }

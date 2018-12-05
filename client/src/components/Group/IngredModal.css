@@ -43,6 +43,8 @@
       10px 10px 0 0 #d98e20,
       11px 11px 0 0 #d98e20,
       12px 12px 0 0 #d98e20;
+      margin-right: 15px;
+
 }
 
 .close-modalbtn:hover{
@@ -56,4 +58,10 @@
       3px 3px 0 0 #d98e20,
       4px 4px 0 0 #d98e20,
       5px 5px 0 0 #d98e20;
+  }
+
+  .ingredient-card {
+
+    box-shadow: 3px 2px 1px #e6e6e6;
+
   }
