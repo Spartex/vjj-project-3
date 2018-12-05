@@ -366,7 +366,7 @@ class Search extends Component {
         <NavBar history={this.props.history} />
         <div className="container">
 
-          <IngredGroupSect prompt={this.state.username + ", pick you ingredient!"}>
+          <IngredGroupSect prompt={this.state.username + ", Pick Your Ingredients!"}>
             {this.state.ingredGroup.map(group => {
               return (
                 <IngredGroupCard
@@ -412,7 +412,7 @@ class Search extends Component {
           })}
 
 
-          <GetRecipeListBtn searching={this.state.searching} action={this.getRecipeList}>Search for Recipes</GetRecipeListBtn>
+          <GetRecipeListBtn searching={this.state.searching} action={this.getRecipeList}>Search For Recipes</GetRecipeListBtn>
         </div>
 
       </div>
