@@ -103,4 +103,20 @@
         width:64px;
         height: 64px;
     }
-  
+
+    .centerImage2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:15px;
+    }
+    
+    .mainH2 {
+        margin: 1em 0 0.5em 0;
+        color: #343434;
+        font-weight: normal;
+        font-size:30px;
+        line-height: 40px;
+        text-align: center;
+        text-shadow: 1px 1px 1px #000;
+    }
