@@ -69,10 +69,9 @@ export class LoginForm extends Component {
       <div>
 
         <img src= "./assets/images/chef-icon.png" className= "centerImage2"></img>
-        <h2 className= "mainH2">Welcome To ChefMeister!</h2>
         <div className="card rounded-0">
           <div className="card-header">
-            <h3 className="mb-0">Login</h3>
+            <h3 className="mb-0">Welcome To ChefMeister!</h3>
           </div>
           <div className="card-body">
             <form className="form" role="form" autoComplete="off" id="formLogin" noValidate="">
