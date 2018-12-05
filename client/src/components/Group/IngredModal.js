@@ -18,7 +18,7 @@ export const IngredModal = props => {
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={props.closeModal}>Close</button>
+                            <button type="button" className="btn btn-secondary close-modalbtn" data-dismiss="modal" onClick={props.closeModal}>Close</button>
                         </div>
                     </div>
                 </div>
