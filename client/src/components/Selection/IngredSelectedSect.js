@@ -5,7 +5,7 @@ export const IngredSelectedSect = props => {
     return (
       <div className="card selectedIngred">
       <div className="card-header">
-        Ingredient List Selected
+        Your Selected Ingredients:
       </div>
       <ul className="list-group list-group-flush">
         {props.children}
