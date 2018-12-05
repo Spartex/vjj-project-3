@@ -67,8 +67,10 @@
   }
 
   .signup-btn {
+    display: block;
     color:#fff !important;
-    margin-left:-7px;
+    margin-left:auto;
+    margin-right:auto;
     width:100%;
     margin-top:35px;
     outline:0; 
@@ -92,3 +94,29 @@
       11px 11px 0 0 #d98e20,
       12px 12px 0 0 #d98e20;
   }
+
+   .centerImage {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:15px;
+        width:64px;
+        height: 64px;
+    }
+
+    .centerImage2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:15px;
+    }
+    
+    .mainH2 {
+        margin: 1em 0 0.5em 0;
+        color: #343434;
+        font-weight: normal;
+        font-size:30px;
+        line-height: 40px;
+        text-align: center;
+        text-shadow: 1px 1px 1px #000;
+    }
