@@ -27,6 +27,9 @@ https://vjjrecipesearch.herokuapp.com/
 ## if installed on Heroku Dev, type the following command to run the seed script
 1.  heroku run node "./scripts/seedDB.js"
 
+## if installed on Heroku Dev, type the following command to set the API keys for spoonacular
+1.  heroku config:set SPOONKEY=XXXXXXXXXXXXXXXXXXX
+1.  heroku config:set SPOONHOST=spoonacular-recipe-food-nutrition-v1.p.rapidapi.com
 
 ## steps to use the placeholder simulated API
 1.  Modify the ./client/src/pages/Search/Search.js
