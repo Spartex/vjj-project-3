@@ -17,220 +17,193 @@ const ingredientSeed = [
     type: "vegetable",
     owner: "system",
     nameImgURL: "./assets/images/testimage.jpg",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Asparagus",
     type: "vegetable",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Carrot",
     type: "vegetable",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Onion",
     type: "vegetable",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Mushroom",
     type: "vegetable",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Peas",
     type: "vegetable",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Beef",
-    type: "meat",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Pork",
-    type: "meat",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Chicken",
-    type: "meat",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Turkey",
-    type: "meat",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Lamb",
-    type: "meat",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
-  {
-    name: "Duck",
-    type: "meat",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
-  },
-  {
-    name: "Venison",
-    type: "meat",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
-  },
-  {
-    name: "Wild Boar",
-    type: "meat",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
-  },
-  {
-    name: "John Egg",
-    type: "egg",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
-  },
+ 
   {
     name: "Fish",
-    type: "seafood",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
 
   {
     name: "Chocolate Sauce",
-    type: "Junk Food",
+    type: "Sweets",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/cupcake.png"
   },
 
   {
     name: "Ice Cream",
-    type: "Junk Food",
+    type: "Sweets",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/cupcake.png"
   },
 
   {
     name: "Lobster",
-    type: "seafood",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Crab",
-    type: "seafood",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Squid",
-    type: "seafood",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Clam",
-    type: "seafood",
+    type: "Protein",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Apple",
     type: "fruit",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/fruits.png"
   },
   {
     name: "Banana",
     type: "fruit",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/fruits.png"
   },
   {
     name: "Pear",
     type: "fruit",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/fruits.png"
   },
   {
     name: "White Rice",
     type: "grain",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/grain.png"
   },
   {
     name: "Brown Rice",
     type: "grain",
     owner: "system",
     nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    typeImgURL: "./assets/images/grain.png"
   },
   {
     name: "Bread",
     type: "grain",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    nameImgURL: "./assets/images/bread.png",
+    typeImgURL: "./assets/images/grain.png"
   },
   {
     name: "Milk",
     type: "dairy",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    nameImgURL: "./assets/images/milk.png",
+    typeImgURL: "./assets/images/milk_1.png"
   },
   {
     name: "Cheese",
     type: "dairy",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    nameImgURL: "./assets/images/cheese.png",
+    typeImgURL: "./assets/images/milk_1.png"
   },
   {
     name: "Yogurt",
     type: "dairy",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "https://via.placeholder.com/150"
+    nameImgURL: "./assets/images/yogurt.png",
+    typeImgURL: "./assets/images/milk_1.png"
   },
 ];
 
