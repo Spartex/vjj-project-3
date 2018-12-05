@@ -122,11 +122,17 @@ and (max-device-width : 812px) {
     }
     
     .h4, h4 {
-        font-size: 16px;
+        font-size: 11px;
         overflow-wrap: break-word;
         text-align: center;
         font-weight: bold;
-        text-shadow: 1px 1px 1px #fff;}
+        text-shadow: 1px 1px 1px #bbbbbb;
+        background-color: #fff;
+    }
+
+    h4.modal-title {
+        font-size: 16px;
+    }
 
 
 }

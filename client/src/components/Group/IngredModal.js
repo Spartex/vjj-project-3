@@ -9,7 +9,7 @@ export const IngredModal = props => {
                     <div className="modal-content">
 
                         <div className="modal-header">
-                            <h4 className="modal-title">Add your {props.type}</h4>
+                            <h4 className="modal-title">Add Your {props.type}</h4>
                             <button type="button" className="close" data-dismiss="modal" onClick={props.closeModal}>&times;</button>
                         </div>
                         <div className="modal-body">
