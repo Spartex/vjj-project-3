@@ -101,7 +101,7 @@ export class RegisterForm extends Component {
   render() {
     return (
       <div>
-        <img src= "./assets/images/register.png" className= "centerImage"></img>
+        <img src= "./assets/images/chef-icon-register.png" className= "centerImage"></img>
         <div className="container-fluid bg-light py-3">
           <div className="row">
             <div className="col-md-6 mx-auto">
