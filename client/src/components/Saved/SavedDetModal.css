@@ -10,3 +10,15 @@
 .ingredPic {
     width: 50px;
 }
+
+.lsmod {
+    text-align: left;
+}
+
+.lsmodheader {
+    text-align: center !important;
+    font-size: 18px;
+    display: block;
+    padding-top: 5px;
+    margin-bottom: -10px;
+}

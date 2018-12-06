@@ -81,11 +81,11 @@ export class SavedDetModal extends Component {
                     <div className="modal-dialog modal-lg modalRecipeDet-dialog">
                         <div className="modal-content">
 
-                            <div className="modal-header">
-                                <a href={this.state.recipeDetails['sourceUrl']} target="_blank"><h4 className="modal-title">{this.props.title}</h4></a>
+                            <div className="modal-header lsmodheader">
+                                <a href={this.state.recipeDetails['sourceUrl']} target="_blank"><h4 className="modal-title lsmodheader">{this.props.title}</h4></a>
                                 <button type="button" className="close" data-dismiss="modal" onClick={this.props.closeModal}>&times;</button>
                             </div>
-                            <div className="modal-body modalRecipeDet-body ">
+                            <div className="modal-body modalRecipeDet-body lsmod ">
                                 <img className="img-fluid modalRecipeImg" src={this.state.recipeDetails['image']} alt={this.props.title}></img>
                                 <hr></hr>
                                 Recipe Src: <a href={this.state.sourceUrl} target="_blank">{this.state.sourceUrl}</a>
