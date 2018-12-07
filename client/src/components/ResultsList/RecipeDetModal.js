@@ -541,7 +541,7 @@ export class RecipeDetModal extends Component {
         console.log(this.props.id)
 
         //this simulates the search for testing purposes   
-        console.log("simulated recipe details output from API")
+      console.log("simulated recipe details output from API")
         setTimeout(() => {
             let randomIndex = Math.floor(Math.random() * recipeDetList.length)
             let recipeIngred = recipeDetList[randomIndex]['extendedIngredients']
@@ -570,7 +570,7 @@ export class RecipeDetModal extends Component {
 
         
         //this is the real API search below
-/*        console.log("real recipe details load from API")
+        /*console.log("real recipe details load from API")
         API.getRecipeDetails(this.props.id)
             .then(res => {
                 let recipeIngred = res.data['extendedIngredients']
@@ -597,7 +597,7 @@ export class RecipeDetModal extends Component {
                 })
             })    */
 
-    }
+    }   
 
     saveRecipe = () => {
         console.log("Saving Recipe for", this.props.username)
