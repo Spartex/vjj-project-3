@@ -86,6 +86,14 @@ const ingredientSeed = [
   },
 
   {
+    name: "Lobster",
+    type: "Protein",
+    owner: "system",
+    nameImgURL: "./assets/images/lobster.png",
+    typeImgURL: "./assets/images/protein.png"
+  },
+
+  {
     name: "Ice Cream",
     type: "Sweets",
     owner: "system",
