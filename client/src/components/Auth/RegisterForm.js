@@ -121,11 +121,11 @@ export class RegisterForm extends Component {
                     <label className="small">
                       <input name="terms" defaultChecked={this.state.terms} onChange={this.handleCheck} type="checkbox" />I have read and agree to the <a href="/terms.html" target="_blank">terms of service</a>
                     </label>
+                    <h4 className="errormsg">{this.state.generalMessage}</h4>
                   </div>
-                  <input className="btn btn-lg btn-primary btn-block signup-btn" disabled={this.state.disableSubmit} value="Sign Me Up" type="submit" onClick={this.handleSubmit} />
+                  <input className="btn btn-lg btn-primary btn-block signup-btn registerbtn" disabled={this.state.disableSubmit} value="Sign Me Up" type="submit" onClick={this.handleSubmit} />
                 </fieldset>
-                <h4>{this.state.generalMessage}</h4>
-                {this.state.disableSubmit && <a href="/login">click to Login</a> }
+                {this.state.disableSubmit && <a href="/login"><button className="btn btn-lg btn-primary btn-block signup-btn registerbtn">click to Login</button></a> }
               </div>
             </div>
           </div>
