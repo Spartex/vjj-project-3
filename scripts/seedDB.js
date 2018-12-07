@@ -17,77 +17,63 @@ const ingredientSeed = [
     name: "Broccoli",
     type: "vegetable",
     owner: "system",
-    nameImgURL: "./assets/images/testimage.jpg",
+    nameImgURL: "./assets/images/broccoli.png",
     typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Asparagus",
     type: "vegetable",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/asparagus.png",
     typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Carrot",
     type: "vegetable",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/carrot.png",
     typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Onion",
     type: "vegetable",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/onion.png",
     typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Mushroom",
     type: "vegetable",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/mushroom.png",
     typeImgURL: "./assets/images/vegetables.png"
   },
   {
     name: "Peas",
     type: "vegetable",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/peas.png",
     typeImgURL: "./assets/images/vegetables.png"
   },
   {
-    name: "Beef",
+    name: "Steak",
     type: "Protein",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/steak.png",
     typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Pork",
     type: "Protein",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/bacon.png",
     typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Chicken",
     type: "Protein",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "./assets/images/protein.png"
-  },
-  {
-    name: "Turkey",
-    type: "Protein",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "./assets/images/protein.png"
-  },
-  {
-    name: "Lamb",
-    type: "Protein",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/roasted-chicken.png",
     typeImgURL: "./assets/images/protein.png"
   },
  
@@ -95,23 +81,23 @@ const ingredientSeed = [
     name: "Fish",
     type: "Protein",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/fish.png",
     typeImgURL: "./assets/images/protein.png"
-  },
-
-  {
-    name: "Chocolate Sauce",
-    type: "Sweets",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "./assets/images/cupcake.png"
   },
 
   {
     name: "Ice Cream",
     type: "Sweets",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/ice-cream.png",
+    typeImgURL: "./assets/images/cupcake.png"
+  },
+
+  {
+    name: "Whipped Cream",
+    type: "Sweets",
+    owner: "system",
+    nameImgURL: "./assets/images/whipped-cream.png",
     typeImgURL: "./assets/images/cupcake.png"
   },
 
@@ -126,56 +112,35 @@ const ingredientSeed = [
     name: "Crab",
     type: "Protein",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "./assets/images/protein.png"
-  },
-  {
-    name: "Squid",
-    type: "Protein",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "./assets/images/protein.png"
-  },
-  {
-    name: "Clam",
-    type: "Protein",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/crab.png",
     typeImgURL: "./assets/images/protein.png"
   },
   {
     name: "Apple",
     type: "fruit",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/apple.png",
     typeImgURL: "./assets/images/fruits.png"
   },
   {
     name: "Banana",
     type: "fruit",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/bananas.png",
     typeImgURL: "./assets/images/fruits.png"
   },
   {
-    name: "Pear",
+    name: "Strawberry",
     type: "fruit",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/strawberry.png",
     typeImgURL: "./assets/images/fruits.png"
   },
   {
     name: "White Rice",
     type: "grain",
     owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "./assets/images/grain.png"
-  },
-  {
-    name: "Brown Rice",
-    type: "grain",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
+    nameImgURL: "./assets/images/rice.png",
     typeImgURL: "./assets/images/grain.png"
   },
   {
