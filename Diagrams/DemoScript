@@ -1,0 +1,23 @@
+Register
+    - demo same user error
+    - demo new user
+
+Login
+    - demo wrong password
+    - demo right password
+
+Search
+    - demo select ingredient
+    - demo delete ingredient
+    - demo Search
+    - demo recipe found
+    - demo save a recipe
+
+Swithced to logged in user with more recipes
+
+Saved
+    - demo the search capabilty of saved recipe
+    - demo how to delete a recipe, show the confirmation prompt
+    - demo how to share
+
+
