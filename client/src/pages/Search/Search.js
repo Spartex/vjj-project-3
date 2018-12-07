@@ -327,8 +327,8 @@ class Search extends Component {
       searching: true
     })
 
-    // this simulates the search for testing purposes /*
-    console.log("Simulating Search Results from Pre-defined List")
+    // this simulates the search for testing purposes 
+/*    console.log("Simulating Search Results from Pre-defined List") 
     let randomIndex = Math.floor(Math.random() * testRecipes.length)
     setTimeout(() => {
       this.props.history.push({

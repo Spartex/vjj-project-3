@@ -540,8 +540,8 @@ export class RecipeDetModal extends Component {
         // get recipe details
         console.log(this.props.id)
 
-        //this simulates the search for testing purposes   /*
-        console.log("simulated recipe details output from API")
+        //this simulates the search for testing purposes   
+/*        console.log("simulated recipe details output from API")
         setTimeout(() => {
             let randomIndex = Math.floor(Math.random() * recipeDetList.length)
             let recipeIngred = recipeDetList[randomIndex]['extendedIngredients']
