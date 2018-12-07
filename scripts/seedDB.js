@@ -100,14 +100,7 @@ const ingredientSeed = [
     nameImgURL: "./assets/images/whipped-cream.png",
     typeImgURL: "./assets/images/cupcake.png"
   },
-
-  {
-    name: "Lobster",
-    type: "Protein",
-    owner: "system",
-    nameImgURL: "https://via.placeholder.com/150",
-    typeImgURL: "./assets/images/protein.png"
-  },
+  
   {
     name: "Crab",
     type: "Protein",
