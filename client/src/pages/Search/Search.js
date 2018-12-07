@@ -328,19 +328,19 @@ class Search extends Component {
     })
 
     // this simulates the search for testing purposes 
-/*    console.log("Simulating Search Results from Pre-defined List") 
+   console.log("Simulating Search Results from Pre-defined List") 
     let randomIndex = Math.floor(Math.random() * testRecipes.length)
     setTimeout(() => {
       this.props.history.push({
         pathname: '/result',
         state: { recipeList: testRecipes[randomIndex] },
       })
-    }, 1000) */
+    }, 1000) 
     
 
 
     // this is the real API search below
-  console.log("real search results")
+  /* console.log("real search results")
     API.getRecipeList(ingredList)
       .then(res => {
         console.log("----->")
@@ -356,7 +356,7 @@ class Search extends Component {
           })
         } )
       })  
-    
+    */
   }
 
 
