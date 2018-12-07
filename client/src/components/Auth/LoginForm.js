@@ -85,16 +85,17 @@ export class LoginForm extends Component {
                 <input type="password" className="form-control form-control-lg rounded-0" id="pwd1" required="" autoComplete="new-password" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password"/>
                 <div className="invalid-feedback">Enter your password too!</div>
               </div>
-              <div>
+              <div class="alert">
                 <label className="custom-control custom-checkbox">
                 <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                   <span className="custom-control-indicator"></span>
                   <span className="custom-control-description small text-dark">Remember me on this computer</span>
                 </label>
+                <h4 className= "errormsg">{this.state.errorMessage}</h4>
               </div>
               <button type="submit" className="btn btn-success btn-lg float-right" id="btnLogin" onClick={this.handleSubmit}>Login</button>
             </form>
-            <h4>{this.state.errorMessage}</h4>
+            
             
           </div>
           
