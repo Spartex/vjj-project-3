@@ -33,7 +33,7 @@ class NavBar extends Component {
 
     return (
       <nav className="rwnav navbar navbar-expand-sm bg-light navbar-light">
-        <a className="navbar-brand" href="/"><img src= "./assets/images/chef-icon.png" className= "centerImage"></img></a>
+        <a className="navbar-brand" href="/"><img src= "./assets/images/chef-icon.png" className= "centerImageLogo"></img></a>
         <button onClick={this.toggleNavBar} className={classTwo} type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
