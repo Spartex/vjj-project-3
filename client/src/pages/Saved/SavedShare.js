@@ -60,7 +60,7 @@ export class SavedShare extends Component {
     return (
       <div className="shareContainer savedShareCont" >
         <div className="card recipeShareCard">
-          <div className="card-header text-center"><a href={this.state.sourceUrl}><h4>{this.state.title}</h4></a></div>
+          <div className="card-header text-center savedHeader"><a href={this.state.sourceUrl}><h4>{this.state.title}</h4></a></div>
           <div className="card-body">
             <div className="text-center"> <img className="img-fluid recipeShareImg" src={this.state.recipeDetails['image']} alt={this.props.title}></img> </div>
             <hr></hr>
